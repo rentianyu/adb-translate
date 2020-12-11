@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Cmd - ADB 翻译文档</title>
+<meta name="description" content="此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中">
+<meta name="generator" content="Hugo 0.68.3" />
+<link href="/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/adb/cmd/">
+<link rel="stylesheet" href="css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Cmd" />
+<meta property="og:description" content=":/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/adb/cmd/" />
+<meta property="og:image" content="images/og-image.png"/>
+<meta property="article:published_time" content="2020-12-11T20:58:57+08:00" />
+<meta property="article:modified_time" content="2020-12-11T20:58:57+08:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="images/og-image.png"/>
+
+<meta name="twitter:title" content="Cmd"/>
+<meta name="twitter:description" content=":/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media."/>
+<meta itemprop="name" content="Cmd">
+<meta itemprop="description" content=":/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media.">
+<meta itemprop="datePublished" content="2020-12-11T20:58:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-11T20:58:57&#43;08:00" />
+<meta itemprop="wordCount" content="191">
+<meta itemprop="image" content="images/og-image.png"/>
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>ADB 翻译文档</h1><span class="version">Version 0.9.6</span><a href="https://github.com/rentianyu/adb-translate" class="github"><i class="fab fa-github"></i></a>
+<p class="description">此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">项目介绍</a></li>
+<li><a href="/about/">关于</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Cmd</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># cmd</span>
+cmd: No service specified; use -l to list all services
+20|:/system/bin <span style="color:#75715e"># cmd -l</span>
+Currently running services:
+  DockObserver
+  MiuiBackup
+  MiuiInit
+  ProcessManager
+  SurfaceFlinger
+  accessibility
+  account
+  activity
+  alarm
+  android.security.keystore
+  android.service.gatekeeper.IGateKeeperService
+  appops
+  appwidget
+  audio
+  autofill
+  backup
+  battery
+  batteryproperties
+  batterystats
+  binder_calls_stats
+  bluetooth_manager
+  carrier_config
+  clipboard
+  cneservice
+  com.goodix.FingerprintService
+  com.qualcomm.location.izat.IzatService
+  commontime_management
+  companiondevice
+  connectivity
+  connmetrics
+  consumer_ir
+  content
+  contexthub
+  country_detector
+  cpuinfo
+  crossprofileapps
+  dbinfo
+  device_identifiers
+  device_policy
+  deviceidle
+  devicestoragemonitor
+  diskstats
+  display
+  dpmservice
+  dreams
+  drm.drmManager
+  dropbox
+  ethernet
+  extphone
+  fingerprint
+  gfxinfo
+  gpu
+  graphicsstats
+  hardware_properties
+  imms
+  incident
+  input
+  input_method
+  installd
+  iphonesubinfo
+  ipsec
+  isms
+  isub
+  jobscheduler
+  launcherapps
+  location
+  locationpolicy
+  lock_settings
+  media.audio_flinger
+  media.audio_policy
+  media.camera
+  media.camera.proxy
+  media.drm
+  media.extractor
+  media.metrics
+  media.player
+  media.resource_manager
+  media.sound_trigger_hw
+  media_projection
+  media_resource_monitor
+  media_router
+  media_session
+  meminfo
+  midi
+  miui.contentcatcher.ContentCatcherService
+  miui.face.FaceService
+  miui.fdpp
+  miui.mqsas.IMQSNative
+  miui.mqsas.MQSService
+  miui.sedc
+  miui.shell
+  miui.whetstone.klo
+  miui.whetstone.mcd
+  miui.whetstone.power
+  miuiboosterservice
+  mount
+  netd
+  netd_listener
+  netpolicy
+  netstats
+  network_management
+  network_score
+  network_time_update_service
+  network_watchlist
+  nfc
+  notification
+  oem_lock
+  otadexopt
+  overlay
+  package
+  package_native
+  perfshielder
+  permission
+  persistent_data_block
+  phone
+  pinner
+  power
+  print
+  processinfo
+  procstats
+  qti.ims.ext
+  recovery
+  restrictions
+  scheduling_policy
+  search
+  sec_key_att_app_id_provider
+  secure_element
+  security
+  sensorservice
+  serial
+  servicediscovery
+  settings
+  shortcut
+  simphonebook
+  sip
+  slice
+  soundtrigger
+  stats
+  statscompanion
+  statusbar
+  storaged
+  storaged_pri
+  storagestats
+  system_update
+  telecom
+  telephony.registry
+  textclassification
+  textservices
+  thermalservice
+  trust
+  uce
+  uimode
+  updatelock
+  usagestats
+  usb
+  user
+  vendor.perfservice
+  vibrator
+  voiceinteraction
+  vold
+  vrmanager
+  wallpaper
+  webviewupdate
+  whetstone.activity
+  wifi
+  wificond
+  wifip2p
+  wifiscanner
+  window
+  xiaomi.aiasstvison
+  xiaomi.joyose
+</code></pre></div><div class="edit-meta">
+Last updated on 11 Dec 2020
+
+
+<br>
+Published on 11 Dec 2020
+<br><a href="https://github.com/rentianyu/adb-translate/edit/master/content/adb/cmd.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/adb/screencap/" title="Screencap"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Screencap</a>
+<a class="nav nav-next" href="/adb/dpm/" title="Dpm">Next - Dpm <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="">Home</a></li>
+
+<li class="parent"><a href="/adb/">ADB有关命令目录</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/adb/adb/">Adb</a></li>
+<li class=""><a href="/adb/wm/">Wm</a></li>
+<li class=""><a href="/adb/toybox/">Toybox</a></li>
+<li class=""><a href="/adb/settings/">Settings</a></li>
+<li class=""><a href="/adb/svc/">Svc</a></li>
+<li class=""><a href="/adb/telecom/">Telecom</a></li>
+<li class=""><a href="/adb/screenrecord/">Screenrecord</a></li>
+<li class=""><a href="/adb/service/">Service</a></li>
+<li class=""><a href="/adb/setenforce/">Setenforce</a></li>
+<li class=""><a href="/adb/setprop/">Setprop</a></li>
+<li class=""><a href="/adb/logcat/">Logcat</a></li>
+<li class=""><a href="/adb/pm/">Pm</a></li>
+<li class=""><a href="/adb/screencap/">Screencap</a></li>
+<li class="active"><a href="/adb/cmd/">Cmd</a></li>
+<li class=""><a href="/adb/dpm/">Dpm</a></li>
+<li class=""><a href="/adb/dumpsys/">Dumpsys</a></li>
+<li class=""><a href="/adb/getprop/">Getprop</a></li>
+<li class=""><a href="/adb/am/">Am</a></li>
+<li class=""><a href="/adb/appops/">Appops</a></li>
+<li class=""><a href="/adb/busybox/">Busybox</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Logcat - ADB 翻译文档</title>
+<meta name="description" content="此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中">
+<meta name="generator" content="Hugo 0.68.3" />
+<link href="/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/adb/logcat/">
+<link rel="stylesheet" href="css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Logcat" />
+<meta property="og:description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; -f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/adb/logcat/" />
+<meta property="og:image" content="images/og-image.png"/>
+<meta property="article:published_time" content="2020-12-11T20:58:58+08:00" />
+<meta property="article:modified_time" content="2020-12-11T20:58:58+08:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="images/og-image.png"/>
+
+<meta name="twitter:title" content="Logcat"/>
+<meta name="twitter:description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; -f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed."/>
+<meta itemprop="name" content="Logcat">
+<meta itemprop="description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; -f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.">
+<meta itemprop="datePublished" content="2020-12-11T20:58:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-11T20:58:58&#43;08:00" />
+<meta itemprop="wordCount" content="566">
+<meta itemprop="image" content="images/og-image.png"/>
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>ADB 翻译文档</h1><span class="version">Version 0.9.6</span><a href="https://github.com/rentianyu/adb-translate" class="github"><i class="fab fa-github"></i></a>
+<p class="description">此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">项目介绍</a></li>
+<li><a href="/about/">关于</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Logcat</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># logcat --help</span>
+Usage: logcat <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>filterspecs<span style="color:#f92672">]</span>
+options include:
+  -s              Set default filter to silent. Equivalent to filterspec <span style="color:#e6db74">&#39;*:S&#39;</span>
+  -f &lt;file&gt;, --file<span style="color:#f92672">=</span>&lt;file&gt;               Log to file. Default is stdout
+  -r &lt;kbytes&gt;, --rotate-kbytes<span style="color:#f92672">=</span>&lt;kbytes&gt;
+                  Rotate log every kbytes. Requires -f option
+  -n &lt;count&gt;, --rotate-count<span style="color:#f92672">=</span>&lt;count&gt;
+                  Sets max number of rotated logs to &lt;count&gt;, default <span style="color:#ae81ff">4</span>
+  --id<span style="color:#f92672">=</span>&lt;id&gt;       If the signature id <span style="color:#66d9ef">for</span> logging to file changes, <span style="color:#66d9ef">then</span> clear
+                  the fileset and <span style="color:#66d9ef">continue</span>
+  -v &lt;format&gt;, --format<span style="color:#f92672">=</span>&lt;format&gt;
+                  Sets log print format verb and adverbs, where &lt;format&gt; is:
+                    brief help long process raw tag thread threadtime time
+                  and individually flagged modifying adverbs can be added:
+                    color descriptive epoch monotonic printable uid
+                    usec UTC year zone
+                  Multiple -v parameters or comma separated list of format and
+                  format modifiers are allowed.
+  -D, --dividers  Print dividers between each log buffer
+  -c, --clear     Clear <span style="color:#f92672">(</span>flush<span style="color:#f92672">)</span> the entire log and exit
+                  <span style="color:#66d9ef">if</span> Log to File specified, clear fileset instead
+  -d              Dump the log and <span style="color:#66d9ef">then</span> exit <span style="color:#f92672">(</span>don<span style="color:#e6db74">&#39;t block)
+</span><span style="color:#e6db74">  -e &lt;expr&gt;, --regex=&lt;expr&gt;
+</span><span style="color:#e6db74">                  Only print lines where the log message matches &lt;expr&gt;
+</span><span style="color:#e6db74">                  where &lt;expr&gt; is a Perl-compatible regular expression
+</span><span style="color:#e6db74">  -m &lt;count&gt;, --max-count=&lt;count&gt;
+</span><span style="color:#e6db74">                  Quit after printing &lt;count&gt; lines. This is meant to be
+</span><span style="color:#e6db74">                  paired with --regex, but will work on its own.
+</span><span style="color:#e6db74">  --print         Paired with --regex and --max-count to let content bypass
+</span><span style="color:#e6db74">                  regex filter but still stop at number of matches.
+</span><span style="color:#e6db74">  -t &lt;count&gt;      Print only the most recent &lt;count&gt; lines (implies -d)
+</span><span style="color:#e6db74">  -t &#39;</span>&lt;time&gt;<span style="color:#e6db74">&#39;     Print most recent lines since specified time (implies -d)
+</span><span style="color:#e6db74">  -T &lt;count&gt;      Print only the most recent &lt;count&gt; lines (does not imply -d)
+</span><span style="color:#e6db74">  -T &#39;</span>&lt;time&gt;<span style="color:#e6db74">&#39;     Print most recent lines since specified time (not imply -d)
+</span><span style="color:#e6db74">                  count is pure numerical, time is &#39;</span>MM-DD hh:mm:ss.mmm...<span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">                  &#39;</span>YYYY-MM-DD hh:mm:ss.mmm...<span style="color:#e6db74">&#39; or &#39;</span>sssss.mmm...<span style="color:#e6db74">&#39; format
+</span><span style="color:#e6db74">  -g, --buffer-size                      Get the size of the ring buffer.
+</span><span style="color:#e6db74">  -G &lt;size&gt;, --buffer-size=&lt;size&gt;
+</span><span style="color:#e6db74">                  Set size of log ring buffer, may suffix with K or M.
+</span><span style="color:#e6db74">  -L, --last      Dump logs from prior to last reboot
+</span><span style="color:#e6db74">  -b &lt;buffer&gt;, --buffer=&lt;buffer&gt;         Request alternate ring buffer, &#39;</span>main<span style="color:#e6db74">&#39;,
+</span><span style="color:#e6db74">                  &#39;</span>system<span style="color:#e6db74">&#39;, &#39;</span>radio<span style="color:#e6db74">&#39;, &#39;</span>events<span style="color:#e6db74">&#39;, &#39;</span>crash<span style="color:#e6db74">&#39;, &#39;</span>default<span style="color:#e6db74">&#39; or &#39;</span>all<span style="color:#e6db74">&#39;.
+</span><span style="color:#e6db74">                  Multiple -b parameters or comma separated list of buffers are
+</span><span style="color:#e6db74">                  allowed. Buffers interleaved. Default -b main,system,crash.
+</span><span style="color:#e6db74">  -B, --binary    Output the log in binary.
+</span><span style="color:#e6db74">  -S, --statistics                       Output statistics.
+</span><span style="color:#e6db74">  -p, --prune     Print prune white and ~black list. Service is specified as
+</span><span style="color:#e6db74">                  UID, UID/PID or /PID. Weighed for quicker pruning if prefix
+</span><span style="color:#e6db74">                  with ~, otherwise weighed for longevity if unadorned. All
+</span><span style="color:#e6db74">                  other pruning activity is oldest first. Special case ~!
+</span><span style="color:#e6db74">                  represents an automatic quicker pruning for the noisiest
+</span><span style="color:#e6db74">                  UID as determined by the current statistics.
+</span><span style="color:#e6db74">  -P &#39;</span>&lt;list&gt; ...<span style="color:#e6db74">&#39;, --prune=&#39;</span>&lt;list&gt; ...<span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">                  Set prune white and ~black list, using same format as
+</span><span style="color:#e6db74">                  listed above. Must be quoted.
+</span><span style="color:#e6db74">  --pid=&lt;pid&gt;     Only prints logs from the given pid.
+</span><span style="color:#e6db74">  --wrap          Sleep for 2 hours or when buffer about to wrap whichever
+</span><span style="color:#e6db74">                  comes first. Improves efficiency of polling by providing
+</span><span style="color:#e6db74">                  an about-to-wrap wakeup.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">filterspecs are a series of
+</span><span style="color:#e6db74">  &lt;tag&gt;[:priority]
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">where &lt;tag&gt; is a log component tag (or * for all) and priority is:
+</span><span style="color:#e6db74">  V    Verbose (default for &lt;tag&gt;)
+</span><span style="color:#e6db74">  D    Debug (default for &#39;</span>*<span style="color:#e6db74">&#39;)
+</span><span style="color:#e6db74">  I    Info
+</span><span style="color:#e6db74">  W    Warn
+</span><span style="color:#e6db74">  E    Error
+</span><span style="color:#e6db74">  F    Fatal
+</span><span style="color:#e6db74">  S    Silent (suppress all output)
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">&#39;</span>*<span style="color:#e6db74">&#39; by itself means &#39;</span>*:D<span style="color:#e6db74">&#39; and &lt;tag&gt; by itself means &lt;tag&gt;:V.
+</span><span style="color:#e6db74">If no &#39;</span>*<span style="color:#e6db74">&#39; filterspec or -s on command line, all filter defaults to &#39;</span>*:V<span style="color:#e6db74">&#39;.
+</span><span style="color:#e6db74">eg: &#39;</span>*:S &lt;tag&gt;<span style="color:#e6db74">&#39; prints only &lt;tag&gt;, &#39;</span>&lt;tag&gt;:S<span style="color:#960050;background-color:#1e0010">&#39;</span> suppresses all &lt;tag&gt; log messages.
+
+If not specified on the command line, filterspec is set from ANDROID_LOG_TAGS.
+
+If not specified with -v on command line, format is set from ANDROID_PRINTF_LOG
+or defaults to <span style="color:#e6db74">&#34;threadtime&#34;</span>
+</code></pre></div><div class="edit-meta">
+Last updated on 11 Dec 2020
+
+
+<br>
+Published on 11 Dec 2020
+<br><a href="https://github.com/rentianyu/adb-translate/edit/master/content/adb/logcat.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/adb/setprop/" title="Setprop"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Setprop</a>
+<a class="nav nav-next" href="/adb/pm/" title="Pm">Next - Pm <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="">Home</a></li>
+
+<li class="parent"><a href="/adb/">ADB有关命令目录</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/adb/adb/">Adb</a></li>
+<li class=""><a href="/adb/wm/">Wm</a></li>
+<li class=""><a href="/adb/toybox/">Toybox</a></li>
+<li class=""><a href="/adb/settings/">Settings</a></li>
+<li class=""><a href="/adb/svc/">Svc</a></li>
+<li class=""><a href="/adb/telecom/">Telecom</a></li>
+<li class=""><a href="/adb/screenrecord/">Screenrecord</a></li>
+<li class=""><a href="/adb/service/">Service</a></li>
+<li class=""><a href="/adb/setenforce/">Setenforce</a></li>
+<li class=""><a href="/adb/setprop/">Setprop</a></li>
+<li class="active"><a href="/adb/logcat/">Logcat</a></li>
+<li class=""><a href="/adb/pm/">Pm</a></li>
+<li class=""><a href="/adb/screencap/">Screencap</a></li>
+<li class=""><a href="/adb/cmd/">Cmd</a></li>
+<li class=""><a href="/adb/dpm/">Dpm</a></li>
+<li class=""><a href="/adb/dumpsys/">Dumpsys</a></li>
+<li class=""><a href="/adb/getprop/">Getprop</a></li>
+<li class=""><a href="/adb/am/">Am</a></li>
+<li class=""><a href="/adb/appops/">Appops</a></li>
+<li class=""><a href="/adb/busybox/">Busybox</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

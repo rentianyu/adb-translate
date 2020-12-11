@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Toybox - ADB 翻译文档</title>
+<meta name="description" content="此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中">
+<meta name="generator" content="Hugo 0.68.3" />
+<link href="/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/adb/toybox/">
+<link rel="stylesheet" href="css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Toybox" />
+<meta property="og:description" content=":/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/adb/toybox/" />
+<meta property="og:image" content="images/og-image.png"/>
+<meta property="article:published_time" content="2020-12-11T20:59:01+08:00" />
+<meta property="article:modified_time" content="2020-12-11T20:59:01+08:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="images/og-image.png"/>
+
+<meta name="twitter:title" content="Toybox"/>
+<meta name="twitter:description" content=":/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat "/>
+<meta itemprop="name" content="Toybox">
+<meta itemprop="description" content=":/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat ">
+<meta itemprop="datePublished" content="2020-12-11T20:59:01&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-11T20:59:01&#43;08:00" />
+<meta itemprop="wordCount" content="181">
+<meta itemprop="image" content="images/og-image.png"/>
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>ADB 翻译文档</h1><span class="version">Version 0.9.6</span><a href="https://github.com/rentianyu/adb-translate" class="github"><i class="fab fa-github"></i></a>
+<p class="description">此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">项目介绍</a></li>
+<li><a href="/about/">关于</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Toybox</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># toybox</span>
+acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod
+chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff
+dirname dmesg dos2unix du echo egrep env expand expr fallocate false
+fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr
+grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd
+insmod install ionice iorenice iotop kill killall ln load_policy log
+logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom
+mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint
+mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch
+pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink
+realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent
+seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum
+sha384sum sha512sum sleep sort split start stat stop strings stty
+swapoff swapon sync sysctl tac tail tar taskset tee time timeout top
+touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount
+uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat
+wc which whoami xargs xxd yes zcat
+</code></pre></div><div class="edit-meta">
+Last updated on 11 Dec 2020
+
+
+<br>
+Published on 11 Dec 2020
+<br><a href="https://github.com/rentianyu/adb-translate/edit/master/content/adb/toybox.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/adb/wm/" title="Wm"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Wm</a>
+<a class="nav nav-next" href="/adb/settings/" title="Settings">Next - Settings <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="">Home</a></li>
+
+<li class="parent"><a href="/adb/">ADB有关命令目录</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/adb/adb/">Adb</a></li>
+<li class=""><a href="/adb/wm/">Wm</a></li>
+<li class="active"><a href="/adb/toybox/">Toybox</a></li>
+<li class=""><a href="/adb/settings/">Settings</a></li>
+<li class=""><a href="/adb/svc/">Svc</a></li>
+<li class=""><a href="/adb/telecom/">Telecom</a></li>
+<li class=""><a href="/adb/screenrecord/">Screenrecord</a></li>
+<li class=""><a href="/adb/service/">Service</a></li>
+<li class=""><a href="/adb/setenforce/">Setenforce</a></li>
+<li class=""><a href="/adb/setprop/">Setprop</a></li>
+<li class=""><a href="/adb/logcat/">Logcat</a></li>
+<li class=""><a href="/adb/pm/">Pm</a></li>
+<li class=""><a href="/adb/screencap/">Screencap</a></li>
+<li class=""><a href="/adb/cmd/">Cmd</a></li>
+<li class=""><a href="/adb/dpm/">Dpm</a></li>
+<li class=""><a href="/adb/dumpsys/">Dumpsys</a></li>
+<li class=""><a href="/adb/getprop/">Getprop</a></li>
+<li class=""><a href="/adb/am/">Am</a></li>
+<li class=""><a href="/adb/appops/">Appops</a></li>
+<li class=""><a href="/adb/busybox/">Busybox</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

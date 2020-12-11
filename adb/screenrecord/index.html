@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Screenrecord - ADB 翻译文档</title>
+<meta name="description" content="此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中">
+<meta name="generator" content="Hugo 0.68.3" />
+<link href="/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="/adb/screenrecord/">
+<link rel="stylesheet" href="css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Screenrecord" />
+<meta property="og:description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/adb/screenrecord/" />
+<meta property="og:image" content="images/og-image.png"/>
+<meta property="article:published_time" content="2020-12-11T20:58:59+08:00" />
+<meta property="article:modified_time" content="2020-12-11T20:58:59+08:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="images/og-image.png"/>
+
+<meta name="twitter:title" content="Screenrecord"/>
+<meta name="twitter:description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e."/>
+<meta itemprop="name" content="Screenrecord">
+<meta itemprop="description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.">
+<meta itemprop="datePublished" content="2020-12-11T20:58:59&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-11T20:58:59&#43;08:00" />
+<meta itemprop="wordCount" content="132">
+<meta itemprop="image" content="images/og-image.png"/>
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>ADB 翻译文档</h1><span class="version">Version 0.9.6</span><a href="https://github.com/rentianyu/adb-translate" class="github"><i class="fab fa-github"></i></a>
+<p class="description">此项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">项目介绍</a></li>
+<li><a href="/about/">关于</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Screenrecord</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># screenrecord --help</span>
+Usage: screenrecord <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;filename&gt;
+
+Android screenrecord v1.2.  Records the device<span style="color:#e6db74">&#39;s display to a .mp4 file.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Options:
+</span><span style="color:#e6db74">--size WIDTHxHEIGHT
+</span><span style="color:#e6db74">    Set the video size, e.g. &#34;1280x720&#34;.  Default is the device&#39;</span>s main
+    display resolution <span style="color:#f92672">(</span><span style="color:#66d9ef">if</span> supported<span style="color:#f92672">)</span>, 1280x720 <span style="color:#66d9ef">if</span> not.  For best results,
+    use a size supported by the AVC encoder.
+--bit-rate RATE
+    Set the video bit rate, in bits per second.  Value may be specified as
+    bits or megabits, e.g. <span style="color:#e6db74">&#39;4000000&#39;</span> is equivalent to <span style="color:#e6db74">&#39;4M&#39;</span>.  Default 20Mbps.
+--bugreport
+    Add additional information, such as a timestamp overlay, that is helpful
+    in videos captured to illustrate bugs.
+--time-limit TIME
+    Set the maximum recording time, in seconds.  Default / maximum is 180.
+--verbose
+    Display interesting information on stdout.
+--help
+    Show this message.
+
+Recording continues <span style="color:#66d9ef">until</span> Ctrl-C is hit or the time limit is reached.
+</code></pre></div><div class="edit-meta">
+Last updated on 11 Dec 2020
+
+
+<br>
+Published on 11 Dec 2020
+<br><a href="https://github.com/rentianyu/adb-translate/edit/master/content/adb/screenrecord.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/adb/telecom/" title="Telecom"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Telecom</a>
+<a class="nav nav-next" href="/adb/service/" title="Service">Next - Service <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="">Home</a></li>
+
+<li class="parent"><a href="/adb/">ADB有关命令目录</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="/adb/adb/">Adb</a></li>
+<li class=""><a href="/adb/wm/">Wm</a></li>
+<li class=""><a href="/adb/toybox/">Toybox</a></li>
+<li class=""><a href="/adb/settings/">Settings</a></li>
+<li class=""><a href="/adb/svc/">Svc</a></li>
+<li class=""><a href="/adb/telecom/">Telecom</a></li>
+<li class="active"><a href="/adb/screenrecord/">Screenrecord</a></li>
+<li class=""><a href="/adb/service/">Service</a></li>
+<li class=""><a href="/adb/setenforce/">Setenforce</a></li>
+<li class=""><a href="/adb/setprop/">Setprop</a></li>
+<li class=""><a href="/adb/logcat/">Logcat</a></li>
+<li class=""><a href="/adb/pm/">Pm</a></li>
+<li class=""><a href="/adb/screencap/">Screencap</a></li>
+<li class=""><a href="/adb/cmd/">Cmd</a></li>
+<li class=""><a href="/adb/dpm/">Dpm</a></li>
+<li class=""><a href="/adb/dumpsys/">Dumpsys</a></li>
+<li class=""><a href="/adb/getprop/">Getprop</a></li>
+<li class=""><a href="/adb/am/">Am</a></li>
+<li class=""><a href="/adb/appops/">Appops</a></li>
+<li class=""><a href="/adb/busybox/">Busybox</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
