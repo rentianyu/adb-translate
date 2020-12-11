@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ADB有关命令目录 on ADB 翻译文档</title>
+    <title>命令目录 on ADB 翻译文档</title>
     <link>https://rentianyu.github.io/adb-translate/adb/</link>
-    <description>Recent content in ADB有关命令目录 on ADB 翻译文档</description>
+    <description>Recent content in 命令目录 on ADB 翻译文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 11 Dec 2020 21:02:15 +0800</lastBuildDate>
