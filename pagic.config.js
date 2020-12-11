@@ -1,4 +1,4 @@
 export default {
     srcDir: 'docs',
-    root: '/adb/'
+    root: '/adb-translate/',
 };
