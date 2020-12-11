@@ -2,18 +2,16 @@ import { React } from 'https://deno.land/x/pagic/mod.ts';
 
 export default {
   srcDir: '.',
-  exclude: ['examples'],
   theme: 'docs',
-  plugins: ['sidebar', 'prev_next', 'gitalk'],
-  title: 'ADB 翻译文档',
-  description: '此开源项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中，希望大家能够贡献自己的一份力量，使之成为将来ADB命令的查询手册，方便大家查询。加油吧，搞机人！',
-  github: 'https://github.com/rentianyu/adb-translate',
+  plugins: ['sidebar', 'prev_next', 'gitalk', 'ga'],
+  title: 'TypeScript 入门教程',
+  description: '从 JavaScript 程序员的角度总结思考，循序渐进的理解 TypeScript。',
+  github: 'https://github.com/xcatliu/typescript-tutorial',
   head: <link rel="icon" type="image/png" href="/favicon.png" />,
-  // 导航栏
   nav: [
     {
-      text: '赞助网站维护者',
-      link: 'https://github.com/rentianyu',
+      text: '赞助作者',
+      link: 'https://github.com/xcatliu/buy-me-a-coffee',
       target: '_blank',
       popover: (
         <>
@@ -23,47 +21,86 @@ export default {
       )
     },
     {
+      text: '加入微信群',
+      popover: (
+        <>
+          <p style={{ marginTop: 0, marginBottom: '1rem' }}>若二维码失效请微信联系 xcatliu 更新</p>
+          <img src="/assets/join-wechat.jpg" width="256" />
+        </>
+      )
+    },
+    {
       text: '加入 QQ 群',
-      link: 'https://jq.qq.com/?_wv=1027&k=LCtkXOpt',
+      link: 'https://jq.qq.com/?_wv=1027&k=5nkkFCl',
       target: '_blank',
       popover: (
         <>
-          <p style={{ marginTop: 0, marginBottom: '1rem' }}>群号: 773276432</p>
+          <p style={{ marginTop: 0, marginBottom: '1rem' }}>群号: 767142358</p>
           <img src="/assets/join-qq.jpg" width="256" />
         </>
       )
     },
+    {
+      text: '下载本书',
+      link: 'https://www.geekxh.com/ts.html?3prc',
+      target: '_blank',
+      popover: (
+        <>
+          <p style={{ marginTop: 0, marginBottom: '1rem' }}>
+            <a href="https://www.geekxh.com/ts.html?3prc" target="_blank">
+              点击下载
+            </a>
+             提取码【8f8b】：
+          </p>
+          <a href="https://www.geekxh.com/ts.html?3prc" target="_blank">
+            <img src="https://www.geekxh.com/ts/09.png?pprv" width="256" />
+          </a>
+        </>
+      )
+    }
   ],
-  // 侧边栏
   sidebar: {
     '/': [
       {
         link: 'introduction/README.md',
+        children: [
+          'introduction/what-is-typescript.md',
+          'introduction/get-typescript.md',
+          'introduction/hello-typescript.md'
         ]
       },
       {
-        link: 'adb/README.md',
+        link: 'basics/README.md',
         children: [
-          'adb/am.md',
-          'adb/appops.md',
-          'adb/busybox.md',
-          'adb/cmd.md',
-          'adb/dpm.md',
-          'adb/dumpsys.md',
-          'adb/getprop.md',
-          'adb/logcat.md',
-          'adb/pm.md',
-          'adb/screencap.md',
-          'adb/screenrecord.md',
-          'adb/service.md',
-          'adb/setenforce.md',
-          'adb/setprop.md',
-          'adb/settings.md',
-          'adb/svc.md',
-          'adb/telecom.md',
-          'adb/toybox.md',
-          'adb/wm.md',
+          'basics/primitive-data-types.md',
+          'basics/any.md',
+          'basics/type-inference.md',
+          'basics/union-types.md',
+          'basics/type-of-object-interfaces.md',
+          'basics/type-of-array.md',
+          'basics/type-of-function.md',
+          'basics/type-assertion.md',
+          'basics/declaration-files.md',
+          'basics/built-in-objects.md'
         ]
+      },
+      {
+        link: 'advanced/README.md',
+        children: [
+          'advanced/type-aliases.md',
+          'advanced/string-literal-types.md',
+          'advanced/tuple.md',
+          'advanced/enum.md',
+          'advanced/class.md',
+          'advanced/class-and-interfaces.md',
+          'advanced/generics.md',
+          'advanced/declaration-merging.md',
+          'advanced/further-reading.md'
+        ]
+      },
+      {
+        link: 'engineering/README.md',
+        children: ['engineering/lint.md', 'engineering/compiler-options.md']
       },
       'thanks/README.md'
     ]
@@ -72,12 +109,34 @@ export default {
     editOnGitHub: true,
     backToTop: true
   },
+  //   tocAd: (
+  //     <div
+  //       dangerouslySetInnerHTML={{
+  //         __html: `
+  // <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  // <!-- 192*128 -->
+  // <ins
+  //   class="adsbygoogle"
+  //   style="display:inline-block;width:192px;height:128px"
+  //   data-ad-client="ca-pub-8483371329009107"
+  //   data-ad-slot="6487368873"
+  // ></ins>
+  // <script>
+  //   (adsbygoogle = window.adsbygoogle || []).push({});
+  // </script>`
+  //       }}
+  //     />
+  //   ),
   gitalk: {
-    clientID: '02b6690ae2881b818993',
-    clientSecret: 'ab1dc3c6f7040f0b7a81b8be542bfafd7a74b89c',
-    repo: 'adb-talk',
-    owner: 'rentianyu',
-    admin: ['rentianyu'],
+    clientID: '29aa4941759fc887ed4f',
+    clientSecret: '33e355efdf3a1959624506a5d88311145208471b',
+    repo: 'typescript-tutorial',
+    owner: 'xcatliu',
+    admin: ['xcatliu'],
     pagerDirection: 'first'
   },
+  ga: {
+    id: 'UA-45256157-14'
+  },
+  port: 8001
 };
