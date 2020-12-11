@@ -1,3 +1,4 @@
 export default {
-    srcDir: 'docs'
+    srcDir: 'docs',
+    root: '/adb/'
 };
