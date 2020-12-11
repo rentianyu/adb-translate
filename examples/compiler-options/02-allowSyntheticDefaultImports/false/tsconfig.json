@@ -1,6 +1,0 @@
-{
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": false,
-        "outDir": "lib"
-    }
-}

@@ -2,22 +2,24 @@ name: gh-pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup deno
         uses: denolib/setup-deno@v2
         with:
-          deno-version: v1.6.0
+          deno-version: v1.5.2
 
       - name: Build gh-pages
         run: |
-          bash update.sh
           curl -fsSL https://deno.land/x/install/install.sh | sh
           export DENO_INSTALL="/home/runner/.deno"
           export PATH="$DENO_INSTALL/bin:$PATH"

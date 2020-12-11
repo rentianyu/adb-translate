@@ -1,6 +1,0 @@
-{
-    "compilerOptions": {
-        "allowJs": false,
-        "outDir": "lib"
-    }
-}
