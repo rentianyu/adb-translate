@@ -22,7 +22,7 @@ export default {
     'contributors': [
         "rentianyu"
     ],
-    'date': "2020-12-11T07:29:52.000Z",
+    'date': "2020-12-11T07:45:15.000Z",
     'updated': null,
     'excerpt': "Package manager (package) commands: help Print this help text. path [--user USER_ID] PACKAGE Print the path to the .apk of the given PACKAGE. dump PACKAGE Print various system state associated with the given PA...",
     'cover': undefined

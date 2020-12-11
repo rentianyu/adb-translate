@@ -22,7 +22,7 @@ export default {
     'contributors': [
         "rentianyu"
     ],
-    'date': "2020-12-11T07:29:52.000Z",
+    'date': "2020-12-11T07:45:15.000Z",
     'updated': null,
     'excerpt': "",
     'cover': undefined

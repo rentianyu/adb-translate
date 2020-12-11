@@ -22,7 +22,7 @@ export default {
     'contributors': [
         "rentianyu"
     ],
-    'date': "2020-12-11T07:29:52.000Z",
+    'date': "2020-12-11T07:45:15.000Z",
     'updated': null,
     'excerpt': "Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P <FILE>] [--start-profiler <FILE>] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--u...",
     'cover': undefined
