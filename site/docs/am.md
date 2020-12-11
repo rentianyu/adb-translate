@@ -1,4 +1,4 @@
-# am 
+# am
 
 ```bash
 Activity manager (activity) commands:
