@@ -1,0 +1,287 @@
+<!doctype html><html data-reactroot=""><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>am · undefined</title><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/index.css"/><link rel="stylesheet" href="/assets/prism_tomorrow.css"/></head><body><article><h1>am</h1>
+<pre class="language-bash"><code class="language-bash">Activity manager <span class="token punctuation">(</span>activity<span class="token punctuation">)</span> commands:
+  <span class="token builtin class-name">help</span>
+      Print this <span class="token builtin class-name">help</span> text.
+  start-activity <span class="token punctuation">[</span>-D<span class="token punctuation">]</span> <span class="token punctuation">[</span>-N<span class="token punctuation">]</span> <span class="token punctuation">[</span>-W<span class="token punctuation">]</span> <span class="token punctuation">[</span>-P <span class="token operator">&lt;</span>FILE<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--start-profiler <span class="token operator">&lt;</span>FILE<span class="token operator">></span><span class="token punctuation">]</span>
+          <span class="token punctuation">[</span>--sampling INTERVAL<span class="token punctuation">]</span> <span class="token punctuation">[</span>--streaming<span class="token punctuation">]</span> <span class="token punctuation">[</span>-R COUNT<span class="token punctuation">]</span> <span class="token punctuation">[</span>-S<span class="token punctuation">]</span>
+          <span class="token punctuation">[</span>--track-allocation<span class="token punctuation">]</span> <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">></span>
+      Start an Activity.  Options are:
+      -D: <span class="token builtin class-name">enable</span> debugging
+      -N: <span class="token builtin class-name">enable</span> native debugging
+      -W: <span class="token function">wait</span> <span class="token keyword">for</span> launch to complete
+      --start-profiler <span class="token operator">&lt;</span>FILE<span class="token operator">></span>: start profiler and send results to <span class="token operator">&lt;</span>FILE<span class="token operator">></span>
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples <span class="token punctuation">(</span>use with --start-profiler<span class="token punctuation">)</span>
+      --streaming: stream the profiling output to the specified <span class="token function">file</span>
+          <span class="token punctuation">(</span>use with --start-profiler<span class="token punctuation">)</span>
+      -P <span class="token operator">&lt;</span>FILE<span class="token operator">></span>: like above, but profiling stops when app goes idle
+      --attach-agent <span class="token operator">&lt;</span>agent<span class="token operator">></span>: attach the given agent before binding
+      --attach-agent-bind <span class="token operator">&lt;</span>agent<span class="token operator">></span>: attach the given agent during binding
+      -R: repeat the activity launch <span class="token operator">&lt;</span>COUNT<span class="token operator">></span> times.  Prior to each repeat,
+          the <span class="token function">top</span> activity will be finished.
+      -S: force stop the target app before starting the activity
+      --track-allocation: <span class="token builtin class-name">enable</span> tracking of object allocations
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: Specify <span class="token function">which</span> user to run as<span class="token punctuation">;</span> <span class="token keyword">if</span> not
+          specified <span class="token keyword">then</span> run as the current user.
+      --windowingMode <span class="token operator">&lt;</span>WINDOWING_MODE<span class="token operator">></span>: The windowing mode to launch the activity into.
+      --activityType <span class="token operator">&lt;</span>ACTIVITY_TYPE<span class="token operator">></span>: The activity <span class="token builtin class-name">type</span> to launch the activity as.
+  start-service <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">></span>
+      Start a Service.  Options are:
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: Specify <span class="token function">which</span> user to run as<span class="token punctuation">;</span> <span class="token keyword">if</span> not
+          specified <span class="token keyword">then</span> run as the current user.
+  start-foreground-service <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">></span>
+      Start a foreground Service.  Options are:
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: Specify <span class="token function">which</span> user to run as<span class="token punctuation">;</span> <span class="token keyword">if</span> not
+          specified <span class="token keyword">then</span> run as the current user.
+  stop-service <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">></span>
+      Stop a Service.  Options are:
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: Specify <span class="token function">which</span> user to run as<span class="token punctuation">;</span> <span class="token keyword">if</span> not
+          specified <span class="token keyword">then</span> run as the current user.
+  broadcast <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> all <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">></span>
+      Send a broadcast Intent.  Options are:
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> all <span class="token operator">|</span> current: Specify <span class="token function">which</span> user to send to<span class="token punctuation">;</span> <span class="token keyword">if</span> not
+          specified <span class="token keyword">then</span> send to all users.
+      --receiver-permission <span class="token operator">&lt;</span>PERMISSION<span class="token operator">></span>: Require receiver to hold permission.
+  instrument <span class="token punctuation">[</span>-r<span class="token punctuation">]</span> <span class="token punctuation">[</span>-e <span class="token operator">&lt;</span>NAME<span class="token operator">></span> <span class="token operator">&lt;</span>VALUE<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-p <span class="token operator">&lt;</span>FILE<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-w<span class="token punctuation">]</span>
+          <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token punctuation">[</span>--no-hidden-api-checks<span class="token punctuation">]</span>
+          <span class="token punctuation">[</span>--no-window-animation<span class="token punctuation">]</span> <span class="token punctuation">[</span>--abi <span class="token operator">&lt;</span>ABI<span class="token operator">></span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>COMPONENT<span class="token operator">></span>
+      Start an Instrumentation.  Typically this target <span class="token operator">&lt;</span>COMPONENT<span class="token operator">></span> is <span class="token keyword">in</span> the
+      form <span class="token operator">&lt;</span>TEST_PACKAGE<span class="token operator">></span>/<span class="token operator">&lt;</span>RUNNER_CLASS<span class="token operator">></span> or only <span class="token operator">&lt;</span>TEST_PACKAGE<span class="token operator">></span> <span class="token keyword">if</span> there
+      is only one instrumentation.  Options are:
+      -r: print raw results <span class="token punctuation">(</span>otherwise decode REPORT_KEY_STREAMRESULT<span class="token punctuation">)</span>.  Use with
+          <span class="token punctuation">[</span>-e perf true<span class="token punctuation">]</span> to generate raw output <span class="token keyword">for</span> performance measurements.
+      -e <span class="token operator">&lt;</span>NAME<span class="token operator">></span> <span class="token operator">&lt;</span>VALUE<span class="token operator">></span>: <span class="token builtin class-name">set</span> argument <span class="token operator">&lt;</span>NAME<span class="token operator">></span> to <span class="token operator">&lt;</span>VALUE<span class="token operator">></span>.  For <span class="token builtin class-name">test</span> runners a
+          common form is <span class="token punctuation">[</span>-e <span class="token operator">&lt;</span>testrunner_flag<span class="token operator">></span> <span class="token operator">&lt;</span>value<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>value<span class="token operator">></span><span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>.
+      -p <span class="token operator">&lt;</span>FILE<span class="token operator">></span>: <span class="token function">write</span> profiling data to <span class="token operator">&lt;</span>FILE<span class="token operator">></span>
+      -m: Write output as protobuf to stdout <span class="token punctuation">(</span>machine readable<span class="token punctuation">)</span>
+      -f <span class="token operator">&lt;</span>Optional <span class="token environment constant">PATH</span>/TO/FILE<span class="token operator">></span>: Write output as protobuf to a <span class="token function">file</span> <span class="token punctuation">(</span>machine
+          readable<span class="token punctuation">)</span>. If path is not specified, default directory and <span class="token function">file</span> name will
+          be used: /sdcard/instrument-logs/log-yyyyMMdd-hhmmss-SSS.instrumentation_data_proto
+      -w: <span class="token function">wait</span> <span class="token keyword">for</span> instrumentation to finish before returning.  Required <span class="token keyword">for</span>
+          <span class="token builtin class-name">test</span> runners.
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: Specify user instrumentation runs <span class="token keyword">in</span><span class="token punctuation">;</span>
+          current user <span class="token keyword">if</span> not specified.
+      --no-hidden-api-checks: disable restrictions on use of hidden API.
+      --no-window-animation: turn off window animations <span class="token keyword">while</span> running.
+      --abi <span class="token operator">&lt;</span>ABI<span class="token operator">></span>: Launch the instrumented process with the selected ABI.
+          This assumes that the process supports the selected ABI.
+  trace-ipc <span class="token punctuation">[</span>start<span class="token operator">|</span>stop<span class="token punctuation">]</span> <span class="token punctuation">[</span>--dump-file <span class="token operator">&lt;</span>FILE<span class="token operator">></span><span class="token punctuation">]</span>
+      Trace IPC transactions.
+      start: start tracing IPC transactions.
+      stop: stop tracing IPC transactions and dump the results to file.
+      --dump-file <span class="token operator">&lt;</span>FILE<span class="token operator">></span>: Specify the <span class="token function">file</span> the trace should be dumped to.
+  profile <span class="token punctuation">[</span>start<span class="token operator">|</span>stop<span class="token punctuation">]</span> <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> current<span class="token punctuation">]</span> <span class="token punctuation">[</span>--sampling INTERVAL<span class="token punctuation">]</span>
+          <span class="token punctuation">[</span>--streaming<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span> <span class="token operator">&lt;</span>FILE<span class="token operator">></span>
+      Start and stop profiler on a process.  The given <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span> argument
+        may be either a process name or pid.  Options are:
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: When supplying a process name,
+          specify user of process to profile<span class="token punctuation">;</span> uses current user <span class="token keyword">if</span> not specified.
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples
+      --streaming: stream the profiling output to the specified <span class="token function">file</span>
+  dumpheap <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> current<span class="token punctuation">]</span> <span class="token punctuation">[</span>-n<span class="token punctuation">]</span> <span class="token punctuation">[</span>-g<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span> <span class="token operator">&lt;</span>FILE<span class="token operator">></span>
+      Dump the heap of a process.  The given <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span> argument may
+        be either a process name or pid.  Options are:
+      -n: dump native heap instead of managed heap
+      -g: force GC before dumping the heap
+      --user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> current: When supplying a process name,
+          specify user of process to dump<span class="token punctuation">;</span> uses current user <span class="token keyword">if</span> not specified.
+  set-debug-app <span class="token punctuation">[</span>-w<span class="token punctuation">]</span> <span class="token punctuation">[</span>--persistent<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span>
+      Set application <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span> to debug.  Options are:
+      -w: <span class="token function">wait</span> <span class="token keyword">for</span> debugger when application starts
+      --persistent: retain this value
+  clear-debug-app
+      Clear the previously set-debug-app.
+  set-watch-heap <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span> <span class="token operator">&lt;</span>MEM-LIMIT<span class="token operator">></span>
+      Start monitoring pss size of <span class="token operator">&lt;</span>PROCESS<span class="token operator">></span>, <span class="token keyword">if</span> it is at or
+      above <span class="token operator">&lt;</span>HEAP-LIMIT<span class="token operator">></span> <span class="token keyword">then</span> a heap dump is collected <span class="token keyword">for</span> the user to report.
+  clear-watch-heap
+      Clear the previously set-watch-heap.
+  bug-report <span class="token punctuation">[</span>--progress <span class="token operator">|</span> --telephony<span class="token punctuation">]</span>
+      Request bug report generation<span class="token punctuation">;</span> will launch a notification
+        when <span class="token keyword">done</span> to <span class="token keyword">select</span> where it should be delivered. Options are:
+     --progress: will launch a notification right away to show its progress.
+     --telephony: will dump only telephony sections.
+  force-stop <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> all <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span>
+      Completely stop the given application package.
+  crash <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">|</span>PID<span class="token operator">></span>
+      Induce a VM crash <span class="token keyword">in</span> the specified package or process
+  <span class="token function">kill</span> <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> all <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span>
+      Kill all background processes associated with the given application.
+  kill-all
+      Kill all processes that are safe to <span class="token function">kill</span> <span class="token punctuation">(</span>cached, etc<span class="token punctuation">)</span>.
+  make-uid-idle <span class="token punctuation">[</span>--user <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">|</span> all <span class="token operator">|</span> current<span class="token punctuation">]</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span>
+      If the given application<span class="token string">'s uid is in the background and waiting to
+      become idle (not allowing background services), do that now.
+  monitor [--gdb &lt;port>]
+      Start monitoring for crashes or ANRs.
+      --gdb: start gdbserv on the given port at crash/ANR
+  watch-uids [--oom &lt;uid>]
+      Start watching for and reporting uid state changes.
+      --oom: specify a uid for which to report detailed change messages.
+  hang [--allow-restart]
+      Hang the system.
+      --allow-restart: allow watchdog to perform normal system restart
+  restart
+      Restart the user-space system.
+  idle-maintenance
+      Perform idle maintenance now.
+  screen-compat [on|off] &lt;PACKAGE>
+      Control screen compatibility mode of &lt;PACKAGE>.
+  package-importance &lt;PACKAGE>
+      Print current importance of &lt;PACKAGE>.
+  to-uri [INTENT]
+      Print the given Intent specification as a URI.
+  to-intent-uri [INTENT]
+      Print the given Intent specification as an intent: URI.
+  to-app-uri [INTENT]
+      Print the given Intent specification as an android-app: URI.
+  switch-user &lt;USER_ID>
+      Switch to put USER_ID in the foreground, starting
+      execution of that user if it is currently stopped.
+  get-current-user
+      Returns id of the current foreground user.
+  start-user &lt;USER_ID>
+      Start USER_ID in background if it is currently stopped;
+      use switch-user if you want to start the user in foreground
+  unlock-user &lt;USER_ID> [TOKEN_HEX]
+      Attempt to unlock the given user using the given authorization token.
+  stop-user [-w] [-f] &lt;USER_ID>
+      Stop execution of USER_ID, not allowing it to run any
+      code until a later explicit start or switch to it.
+      -w: wait for stop-user to complete.
+      -f: force stop even if there are related users that cannot be stopped.
+  is-user-stopped &lt;USER_ID>
+      Returns whether &lt;USER_ID> has been stopped or not.
+  get-started-user-state &lt;USER_ID>
+      Gets the current state of the given started user.
+  track-associations
+      Enable association tracking.
+  untrack-associations
+      Disable and clear association tracking.
+  get-uid-state &lt;UID>
+      Gets the process state of an app given its &lt;UID>.
+  attach-agent &lt;PROCESS> &lt;FILE>
+    Attach an agent to the specified &lt;PROCESS>, which may be either a process name or a PID.
+  get-config [--days N] [--device] [--proto]
+      Retrieve the configuration and any recent configurations of the device.
+      --days: also return last N days of configurations that have been seen.
+      --device: also output global device configuration info.
+      --proto: return result as a proto; does not include --days info.
+  supports-multiwindow
+      Returns true if the device supports multiwindow.
+  supports-split-screen-multi-window
+      Returns true if the device supports split screen multiwindow.
+  suppress-resize-config-changes &lt;true|false>
+      Suppresses configuration changes due to user resizing an activity/task.
+  set-inactive [--user &lt;USER_ID>] &lt;PACKAGE> true|false
+      Sets the inactive state of an app.
+  get-inactive [--user &lt;USER_ID>] &lt;PACKAGE>
+      Returns the inactive state of an app.
+  set-standby-bucket [--user &lt;USER_ID>] &lt;PACKAGE> active|working_set|frequent|rare
+      Puts an app in the standby bucket.
+  get-standby-bucket [--user &lt;USER_ID>] &lt;PACKAGE>
+      Returns the standby bucket of an app.
+  send-trim-memory [--user &lt;USER_ID>] &lt;PROCESS>
+          [HIDDEN|RUNNING_MODERATE|BACKGROUND|RUNNING_LOW|MODERATE|RUNNING_CRITICAL|COMPLETE]
+      Send a memory trim event to a &lt;PROCESS>.  May also supply a raw trim int level.
+  display [COMMAND] [...]: sub-commands for operating on displays.
+       move-stack &lt;STACK_ID> &lt;DISPLAY_ID>
+           Move &lt;STACK_ID> from its current display to &lt;DISPLAY_ID>.
+  stack [COMMAND] [...]: sub-commands for operating on activity stacks.
+       start &lt;DISPLAY_ID> &lt;INTENT>
+           Start a new activity on &lt;DISPLAY_ID> using &lt;INTENT>
+       move-task &lt;TASK_ID> &lt;STACK_ID> [true|false]
+           Move &lt;TASK_ID> from its current stack to the top (true) or
+           bottom (false) of &lt;STACK_ID>.
+       resize &lt;STACK_ID> &lt;LEFT,TOP,RIGHT,BOTTOM>
+           Change &lt;STACK_ID> size and position to &lt;LEFT,TOP,RIGHT,BOTTOM>.
+       resize-animated &lt;STACK_ID> &lt;LEFT,TOP,RIGHT,BOTTOM>
+           Same as resize, but allow animation.
+       resize-docked-stack &lt;LEFT,TOP,RIGHT,BOTTOM> [&lt;TASK_LEFT,TASK_TOP,TASK_RIGHT,TASK_BOTTOM>]
+           Change docked stack to &lt;LEFT,TOP,RIGHT,BOTTOM>
+           and supplying temporary different task bounds indicated by
+           &lt;TASK_LEFT,TOP,RIGHT,BOTTOM>
+       move-top-activity-to-pinned-stack: &lt;STACK_ID> &lt;LEFT,TOP,RIGHT,BOTTOM>
+           Moves the top activity from
+           &lt;STACK_ID> to the pinned stack using &lt;LEFT,TOP,RIGHT,BOTTOM> for the
+           bounds of the pinned stack.
+       positiontask &lt;TASK_ID> &lt;STACK_ID> &lt;POSITION>
+           Place &lt;TASK_ID> in &lt;STACK_ID> at &lt;POSITION>
+       list
+           List all of the activity stacks and their sizes.
+       info &lt;WINDOWING_MODE> &lt;ACTIVITY_TYPE>
+           Display the information about activity stack in &lt;WINDOWING_MODE> and &lt;ACTIVITY_TYPE>.
+       remove &lt;STACK_ID>
+           Remove stack &lt;STACK_ID>.
+  task [COMMAND] [...]: sub-commands for operating on activity tasks.
+       lock &lt;TASK_ID>
+           Bring &lt;TASK_ID> to the front and don'</span>t allow other tasks to run.
+       lock stop
+           End the current task lock.
+       resizeable <span class="token operator">&lt;</span>TASK_ID<span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">|</span><span class="token number">1</span><span class="token operator">|</span><span class="token number">2</span><span class="token operator">|</span><span class="token number">3</span><span class="token punctuation">]</span>
+           Change resizeable mode of <span class="token operator">&lt;</span>TASK_ID<span class="token operator">></span> to one of the following:
+           <span class="token number">0</span>: unresizeable
+           <span class="token number">1</span>: crop_windows
+           <span class="token number">2</span>: resizeable
+           <span class="token number">3</span>: resizeable_and_pipable
+       resize <span class="token operator">&lt;</span>TASK_ID<span class="token operator">></span> <span class="token operator">&lt;</span>LEFT,TOP,RIGHT,BOTTOM<span class="token operator">></span>
+           Makes sure <span class="token operator">&lt;</span>TASK_ID<span class="token operator">></span> is <span class="token keyword">in</span> a stack with the specified bounds.
+           Forces the task to be resizeable and creates a stack <span class="token keyword">if</span> no existing stack
+           has the specified bounds.
+  update-appinfo <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span> <span class="token operator">&lt;</span>PACKAGE_NAME<span class="token operator">></span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>PACKAGE_NAME<span class="token operator">></span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+      Update the ApplicationInfo objects of the listed packages <span class="token keyword">for</span> <span class="token operator">&lt;</span>USER_ID<span class="token operator">></span>
+      without restarting any processes.
+  <span class="token function">write</span>
+      Write all pending state to storage.
+
+<span class="token operator">&lt;</span>INTENT<span class="token operator">></span> specifications include these flags and arguments:
+    <span class="token punctuation">[</span>-a <span class="token operator">&lt;</span>ACTION<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-d <span class="token operator">&lt;</span>DATA_URI<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-t <span class="token operator">&lt;</span>MIME_TYPE<span class="token operator">></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>CATEGORY<span class="token operator">></span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>CATEGORY<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>-n <span class="token operator">&lt;</span>COMPONENT_NAME<span class="token operator">></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>-e<span class="token operator">|</span>--es <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_STRING_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--esn <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--ez <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_BOOLEAN_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--ei <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_INT_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--el <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_LONG_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--ef <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_FLOAT_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--eu <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_URI_VALUE<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--ecn <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_COMPONENT_NAME_VALUE<span class="token operator">></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--eia <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_INT_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_INT_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as Integer<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--eial <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_INT_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_INT_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as List<span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--ela <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_LONG_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_LONG_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as Long<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--elal <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_LONG_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_LONG_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as List<span class="token operator">&lt;</span>Long<span class="token operator">></span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--efa <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_FLOAT_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_FLOAT_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as Float<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--efal <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_FLOAT_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_FLOAT_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as List<span class="token operator">&lt;</span>Float<span class="token operator">></span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--esa <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_STRING_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_STRING_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as String<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> to embed a comma into a string,
+         escape it using <span class="token string">"\,"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>--esal <span class="token operator">&lt;</span>EXTRA_KEY<span class="token operator">></span> <span class="token operator">&lt;</span>EXTRA_STRING_VALUE<span class="token operator">></span><span class="token punctuation">[</span>,<span class="token operator">&lt;</span>EXTRA_STRING_VALUE<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">(</span>mutiple extras passed as List<span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">;</span> to embed a comma into a string,
+         escape it using <span class="token string">"\,"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>-f <span class="token operator">&lt;</span>FLAG<span class="token operator">></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--grant-read-uri-permission<span class="token punctuation">]</span> <span class="token punctuation">[</span>--grant-write-uri-permission<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--grant-persistable-uri-permission<span class="token punctuation">]</span> <span class="token punctuation">[</span>--grant-prefix-uri-permission<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--debug-log-resolution<span class="token punctuation">]</span> <span class="token punctuation">[</span>--exclude-stopped-packages<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--include-stopped-packages<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-brought-to-front<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-clear-top<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-clear-when-task-reset<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-exclude-from-recents<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-launched-from-history<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-multiple-task<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-no-animation<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-no-history<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-no-user-action<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-previous-is-top<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-reorder-to-front<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-reset-task-if-needed<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-single-top<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-clear-task<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--activity-task-on-home<span class="token punctuation">]</span> <span class="token punctuation">[</span>--activity-match-external<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--receiver-registered-only<span class="token punctuation">]</span> <span class="token punctuation">[</span>--receiver-replace-pending<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--receiver-foreground<span class="token punctuation">]</span> <span class="token punctuation">[</span>--receiver-no-abort<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--receiver-include-background<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--selector<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span><span class="token operator">&lt;</span>URI<span class="token operator">></span> <span class="token operator">|</span> <span class="token operator">&lt;</span>PACKAGE<span class="token operator">></span> <span class="token operator">|</span> <span class="token operator">&lt;</span>COMPONENT<span class="token operator">></span><span class="token punctuation">]</span>
+
+</code></pre></article><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/index.js"></script></body></html>
