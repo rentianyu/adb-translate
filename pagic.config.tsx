@@ -1,12 +1,12 @@
 export default {
   srcDir: 'docs',
-  root: '/adb-translate/',
+//  root: '/adb-translate/',
   theme: 'docs',
   plugins: ['sidebar', 'gitalk'],
   title: 'ADB 翻译文档',
   description: '此开源项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中，希望大家能够贡献自己的一份力量，使之成为将来ADB命令的查询手册，方便大家查询。加油吧，搞机人！',
   github: 'https://github.com/rentianyu/adb-translate',
-  head: <link rel="icon" type="image/png" href="/favicon.png" />,
+  head: <link rel="icon" type="image/png" href="/assets/favicon.png" />,
   // 导航栏
   nav: [
     {
