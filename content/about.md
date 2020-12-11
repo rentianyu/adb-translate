@@ -2,16 +2,8 @@
 title = "关于"
 date = "2014-04-09"
 menu = "main"
+
 +++
 
-Hugo is a static site engine written in Go.
+## 暂时不知道写啥，先空着吧
 
-
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
