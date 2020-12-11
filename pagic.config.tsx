@@ -1,5 +1,3 @@
-import { React } from 'https://deno.land/x/pagic/mod.ts';
-
 export default {
   srcDir: '.',
   theme: 'docs',
