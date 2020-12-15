@@ -3,126 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/adb/</loc>
-    <lastmod>2020-12-11T21:02:15+08:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/</loc>
-    <lastmod>2020-12-11T21:02:15+08:00</lastmod>
+    <loc>/docs/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/wm/</loc>
-    <lastmod>2020-12-11T20:59:03+08:00</lastmod>
+    <loc>/docs/adb/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/toybox/</loc>
-    <lastmod>2020-12-11T20:59:01+08:00</lastmod>
+    <loc>/docs/am/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/settings/</loc>
-    <lastmod>2020-12-11T20:59:00+08:00</lastmod>
+    <loc>/docs/appops/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/svc/</loc>
-    <lastmod>2020-12-11T20:59:00+08:00</lastmod>
+    <loc>/docs/busybox/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/telecom/</loc>
-    <lastmod>2020-12-11T20:59:00+08:00</lastmod>
+    <loc>/docs/cmd/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/screenrecord/</loc>
-    <lastmod>2020-12-11T20:58:59+08:00</lastmod>
+    <loc>/docs/dpm/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/service/</loc>
-    <lastmod>2020-12-11T20:58:59+08:00</lastmod>
+    <loc>/docs/dumpsys/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/setenforce/</loc>
-    <lastmod>2020-12-11T20:58:59+08:00</lastmod>
+    <loc>/docs/getprop/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/setprop/</loc>
-    <lastmod>2020-12-11T20:58:59+08:00</lastmod>
+    <loc>/docs/logcat/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/logcat/</loc>
-    <lastmod>2020-12-11T20:58:58+08:00</lastmod>
+    <loc>/docs/pm/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/pm/</loc>
-    <lastmod>2020-12-11T20:58:58+08:00</lastmod>
+    <loc>/docs/screencap/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/screencap/</loc>
-    <lastmod>2020-12-11T20:58:58+08:00</lastmod>
+    <loc>/docs/screenrecord/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/cmd/</loc>
-    <lastmod>2020-12-11T20:58:57+08:00</lastmod>
+    <loc>/docs/service/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/dpm/</loc>
-    <lastmod>2020-12-11T20:58:57+08:00</lastmod>
+    <loc>/docs/setenforce/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/dumpsys/</loc>
-    <lastmod>2020-12-11T20:58:57+08:00</lastmod>
+    <loc>/docs/setprop/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/getprop/</loc>
-    <lastmod>2020-12-11T20:58:57+08:00</lastmod>
+    <loc>/docs/settings/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/am/</loc>
-    <lastmod>2020-12-11T20:58:56+08:00</lastmod>
+    <loc>/docs/svc/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/appops/</loc>
-    <lastmod>2020-12-11T20:58:56+08:00</lastmod>
+    <loc>/docs/telecom/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/adb/busybox/</loc>
-    <lastmod>2020-12-11T20:58:56+08:00</lastmod>
+    <loc>/docs/toybox/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/</loc>
-    <lastmod>2019-10-26T15:26:15+00:00</lastmod>
+    <loc>/docs/wm/</loc>
+    <lastmod>2020-12-15T16:33:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://rentianyu.github.io/adb-translate/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rentianyu.github.io/adb-translate/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

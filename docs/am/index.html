@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.68.3" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=":/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &lt;FILE&gt;: like above, but profiling stops when app goes idle --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content=":/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &lt;FILE&gt;: like above, but profiling stops when app goes idle --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/am/" />
+<meta property="article:modified_time" content="2020-12-15T16:33:56+08:00" />
+<title>Am | ADB 翻译文档</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
+<script defer src="/en.search.min.a1b0c0925f11588e0be4158d06e7f09c6c82677b2ac45b9bd22e4c157efae3ba.js" integrity="sha256-obDAkl8RWI4L5BWNBufwnGyCZ3sqxFub0i5MFX7647o="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>ADB 翻译文档</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/adb/" class="">Adb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/am/" class=" active">Am</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/appops/" class="">Appops</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/busybox/" class="">Busybox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cmd/" class="">Cmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dpm/" class="">Dpm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dumpsys/" class="">Dumpsys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/getprop/" class="">Getprop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/logcat/" class="">Logcat</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/pm/" class="">Pm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/screencap/" class="">Screencap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/screenrecord/" class="">Screenrecord</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/service/" class="">Service</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/setenforce/" class="">Setenforce</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/setprop/" class="">Setprop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/settings/" class="">Settings</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/svc/" class="">Svc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/telecom/" class="">Telecom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/toybox/" class="">Toybox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/wm/" class="">Wm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/rentianyu/adb-translate" target="_blank" rel="noopener">
+        Github项目地址
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo 主题
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Am</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents"></nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># am</span>
+Activity manager <span style="color:#f92672">(</span>activity<span style="color:#f92672">)</span> commands:
+  help
+      Print this help text.
+  start-activity <span style="color:#f92672">[</span>-D<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-W<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--start-profiler &lt;FILE&gt;<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--sampling INTERVAL<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--streaming<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-R COUNT<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-S<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--track-allocation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      Start an Activity.  Options are:
+      -D: enable debugging
+      -N: enable native debugging
+      -W: wait <span style="color:#66d9ef">for</span> launch to complete
+      --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt;
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+      --streaming: stream the profiling output to the specified file
+          <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+      -P &lt;FILE&gt;: like above, but profiling stops when app goes idle
+      --attach-agent &lt;agent&gt;: attach the given agent before binding
+      --attach-agent-bind &lt;agent&gt;: attach the given agent during binding
+      -R: repeat the activity launch &lt;COUNT&gt; times.  Prior to each repeat,
+          the top activity will be finished.
+      -S: force stop the target app before starting the activity
+      --track-allocation: enable tracking of object allocations
+      --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
+          specified <span style="color:#66d9ef">then</span> run as the current user.
+      --windowingMode &lt;WINDOWING_MODE&gt;: The windowing mode to launch the activity into.
+      --activityType &lt;ACTIVITY_TYPE&gt;: The activity type to launch the activity as.
+  start-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      Start a Service.  Options are:
+      --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
+          specified <span style="color:#66d9ef">then</span> run as the current user.
+  start-foreground-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      Start a foreground Service.  Options are:
+      --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
+          specified <span style="color:#66d9ef">then</span> run as the current user.
+  stop-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      Stop a Service.  Options are:
+      --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
+          specified <span style="color:#66d9ef">then</span> run as the current user.
+  broadcast <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      Send a broadcast Intent.  Options are:
+      --user &lt;USER_ID&gt; | all | current: Specify which user to send to; <span style="color:#66d9ef">if</span> not
+          specified <span style="color:#66d9ef">then</span> send to all users.
+      --receiver-permission &lt;PERMISSION&gt;: Require receiver to hold permission.
+  instrument <span style="color:#f92672">[</span>-r<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-e &lt;NAME&gt; &lt;VALUE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-p &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-w<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--no-hidden-api-checks<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--no-window-animation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--abi &lt;ABI&gt;<span style="color:#f92672">]</span> &lt;COMPONENT&gt;
+      Start an Instrumentation.  Typically this target &lt;COMPONENT&gt; is in the
+      form &lt;TEST_PACKAGE&gt;/&lt;RUNNER_CLASS&gt; or only &lt;TEST_PACKAGE&gt; <span style="color:#66d9ef">if</span> there
+      is only one instrumentation.  Options are:
+      -r: print raw results <span style="color:#f92672">(</span>otherwise decode REPORT_KEY_STREAMRESULT<span style="color:#f92672">)</span>.  Use with
+          <span style="color:#f92672">[</span>-e perf true<span style="color:#f92672">]</span> to generate raw output <span style="color:#66d9ef">for</span> performance measurements.
+      -e &lt;NAME&gt; &lt;VALUE&gt;: set argument &lt;NAME&gt; to &lt;VALUE&gt;.  For test runners a
+          common form is <span style="color:#f92672">[</span>-e &lt;testrunner_flag&gt; &lt;value&gt;<span style="color:#f92672">[</span>,&lt;value&gt;...<span style="color:#f92672">]]</span>.
+      -p &lt;FILE&gt;: write profiling data to &lt;FILE&gt;
+      -m: Write output as protobuf to stdout <span style="color:#f92672">(</span>machine readable<span style="color:#f92672">)</span>
+      -f &lt;Optional PATH/TO/FILE&gt;: Write output as protobuf to a file <span style="color:#f92672">(</span>machine
+          readable<span style="color:#f92672">)</span>. If path is not specified, default directory and file name will
+          be used: /sdcard/instrument-logs/log-yyyyMMdd-hhmmss-SSS.instrumentation_data_proto
+      -w: wait <span style="color:#66d9ef">for</span> instrumentation to finish before returning.  Required <span style="color:#66d9ef">for</span>
+          test runners.
+      --user &lt;USER_ID&gt; | current: Specify user instrumentation runs in;
+          current user <span style="color:#66d9ef">if</span> not specified.
+      --no-hidden-api-checks: disable restrictions on use of hidden API.
+      --no-window-animation: turn off window animations <span style="color:#66d9ef">while</span> running.
+      --abi &lt;ABI&gt;: Launch the instrumented process with the selected ABI.
+          This assumes that the process supports the selected ABI.
+  trace-ipc <span style="color:#f92672">[</span>start|stop<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--dump-file &lt;FILE&gt;<span style="color:#f92672">]</span>
+      Trace IPC transactions.
+      start: start tracing IPC transactions.
+      stop: stop tracing IPC transactions and dump the results to file.
+      --dump-file &lt;FILE&gt;: Specify the file the trace should be dumped to.
+  profile <span style="color:#f92672">[</span>start|stop<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--sampling INTERVAL<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--streaming<span style="color:#f92672">]</span> &lt;PROCESS&gt; &lt;FILE&gt;
+      Start and stop profiler on a process.  The given &lt;PROCESS&gt; argument
+        may be either a process name or pid.  Options are:
+      --user &lt;USER_ID&gt; | current: When supplying a process name,
+          specify user of process to profile; uses current user <span style="color:#66d9ef">if</span> not specified.
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples
+      --streaming: stream the profiling output to the specified file
+  dumpheap <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-n<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-g<span style="color:#f92672">]</span> &lt;PROCESS&gt; &lt;FILE&gt;
+      Dump the heap of a process.  The given &lt;PROCESS&gt; argument may
+        be either a process name or pid.  Options are:
+      -n: dump native heap instead of managed heap
+      -g: force GC before dumping the heap
+      --user &lt;USER_ID&gt; | current: When supplying a process name,
+          specify user of process to dump; uses current user <span style="color:#66d9ef">if</span> not specified.
+  set-debug-app <span style="color:#f92672">[</span>-w<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--persistent<span style="color:#f92672">]</span> &lt;PACKAGE&gt;
+      Set application &lt;PACKAGE&gt; to debug.  Options are:
+      -w: wait <span style="color:#66d9ef">for</span> debugger when application starts
+      --persistent: retain this value
+  clear-debug-app
+      Clear the previously set-debug-app.
+  set-watch-heap &lt;PROCESS&gt; &lt;MEM-LIMIT&gt;
+      Start monitoring pss size of &lt;PROCESS&gt;, <span style="color:#66d9ef">if</span> it is at or
+      above &lt;HEAP-LIMIT&gt; <span style="color:#66d9ef">then</span> a heap dump is collected <span style="color:#66d9ef">for</span> the user to report.
+  clear-watch-heap
+      Clear the previously set-watch-heap.
+  bug-report <span style="color:#f92672">[</span>--progress | --telephony<span style="color:#f92672">]</span>
+      Request bug report generation; will launch a notification
+        when <span style="color:#66d9ef">done</span> to <span style="color:#66d9ef">select</span> where it should be delivered. Options are:
+     --progress: will launch a notification right away to show its progress.
+     --telephony: will dump only telephony sections.
+  force-stop <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;PACKAGE&gt;
+      Completely stop the given application package.
+  crash <span style="color:#f92672">[</span>--user &lt;USER_ID&gt;<span style="color:#f92672">]</span> &lt;PACKAGE|PID&gt;
+      Induce a VM crash in the specified package or process
+  kill <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;PACKAGE&gt;
+      Kill all background processes associated with the given application.
+  kill-all
+      Kill all processes that are safe to kill <span style="color:#f92672">(</span>cached, etc<span style="color:#f92672">)</span>.
+  make-uid-idle <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;PACKAGE&gt;
+      If the given application<span style="color:#e6db74">&#39;s uid is in the background and waiting to
+</span><span style="color:#e6db74">      become idle (not allowing background services), do that now.
+</span><span style="color:#e6db74">  monitor [--gdb &lt;port&gt;]
+</span><span style="color:#e6db74">      Start monitoring for crashes or ANRs.
+</span><span style="color:#e6db74">      --gdb: start gdbserv on the given port at crash/ANR
+</span><span style="color:#e6db74">  watch-uids [--oom &lt;uid&gt;]
+</span><span style="color:#e6db74">      Start watching for and reporting uid state changes.
+</span><span style="color:#e6db74">      --oom: specify a uid for which to report detailed change messages.
+</span><span style="color:#e6db74">  hang [--allow-restart]
+</span><span style="color:#e6db74">      Hang the system.
+</span><span style="color:#e6db74">      --allow-restart: allow watchdog to perform normal system restart
+</span><span style="color:#e6db74">  restart
+</span><span style="color:#e6db74">      Restart the user-space system.
+</span><span style="color:#e6db74">  idle-maintenance
+</span><span style="color:#e6db74">      Perform idle maintenance now.
+</span><span style="color:#e6db74">  screen-compat [on|off] &lt;PACKAGE&gt;
+</span><span style="color:#e6db74">      Control screen compatibility mode of &lt;PACKAGE&gt;.
+</span><span style="color:#e6db74">  package-importance &lt;PACKAGE&gt;
+</span><span style="color:#e6db74">      Print current importance of &lt;PACKAGE&gt;.
+</span><span style="color:#e6db74">  to-uri [INTENT]
+</span><span style="color:#e6db74">      Print the given Intent specification as a URI.
+</span><span style="color:#e6db74">  to-intent-uri [INTENT]
+</span><span style="color:#e6db74">      Print the given Intent specification as an intent: URI.
+</span><span style="color:#e6db74">  to-app-uri [INTENT]
+</span><span style="color:#e6db74">      Print the given Intent specification as an android-app: URI.
+</span><span style="color:#e6db74">  switch-user &lt;USER_ID&gt;
+</span><span style="color:#e6db74">      Switch to put USER_ID in the foreground, starting
+</span><span style="color:#e6db74">      execution of that user if it is currently stopped.
+</span><span style="color:#e6db74">  get-current-user
+</span><span style="color:#e6db74">      Returns id of the current foreground user.
+</span><span style="color:#e6db74">  start-user &lt;USER_ID&gt;
+</span><span style="color:#e6db74">      Start USER_ID in background if it is currently stopped;
+</span><span style="color:#e6db74">      use switch-user if you want to start the user in foreground
+</span><span style="color:#e6db74">  unlock-user &lt;USER_ID&gt; [TOKEN_HEX]
+</span><span style="color:#e6db74">      Attempt to unlock the given user using the given authorization token.
+</span><span style="color:#e6db74">  stop-user [-w] [-f] &lt;USER_ID&gt;
+</span><span style="color:#e6db74">      Stop execution of USER_ID, not allowing it to run any
+</span><span style="color:#e6db74">      code until a later explicit start or switch to it.
+</span><span style="color:#e6db74">      -w: wait for stop-user to complete.
+</span><span style="color:#e6db74">      -f: force stop even if there are related users that cannot be stopped.
+</span><span style="color:#e6db74">  is-user-stopped &lt;USER_ID&gt;
+</span><span style="color:#e6db74">      Returns whether &lt;USER_ID&gt; has been stopped or not.
+</span><span style="color:#e6db74">  get-started-user-state &lt;USER_ID&gt;
+</span><span style="color:#e6db74">      Gets the current state of the given started user.
+</span><span style="color:#e6db74">  track-associations
+</span><span style="color:#e6db74">      Enable association tracking.
+</span><span style="color:#e6db74">  untrack-associations
+</span><span style="color:#e6db74">      Disable and clear association tracking.
+</span><span style="color:#e6db74">  get-uid-state &lt;UID&gt;
+</span><span style="color:#e6db74">      Gets the process state of an app given its &lt;UID&gt;.
+</span><span style="color:#e6db74">  attach-agent &lt;PROCESS&gt; &lt;FILE&gt;
+</span><span style="color:#e6db74">    Attach an agent to the specified &lt;PROCESS&gt;, which may be either a process name or a PID.
+</span><span style="color:#e6db74">  get-config [--days N] [--device] [--proto]
+</span><span style="color:#e6db74">      Retrieve the configuration and any recent configurations of the device.
+</span><span style="color:#e6db74">      --days: also return last N days of configurations that have been seen.
+</span><span style="color:#e6db74">      --device: also output global device configuration info.
+</span><span style="color:#e6db74">      --proto: return result as a proto; does not include --days info.
+</span><span style="color:#e6db74">  supports-multiwindow
+</span><span style="color:#e6db74">      Returns true if the device supports multiwindow.
+</span><span style="color:#e6db74">  supports-split-screen-multi-window
+</span><span style="color:#e6db74">      Returns true if the device supports split screen multiwindow.
+</span><span style="color:#e6db74">  suppress-resize-config-changes &lt;true|false&gt;
+</span><span style="color:#e6db74">      Suppresses configuration changes due to user resizing an activity/task.
+</span><span style="color:#e6db74">  set-inactive [--user &lt;USER_ID&gt;] &lt;PACKAGE&gt; true|false
+</span><span style="color:#e6db74">      Sets the inactive state of an app.
+</span><span style="color:#e6db74">  get-inactive [--user &lt;USER_ID&gt;] &lt;PACKAGE&gt;
+</span><span style="color:#e6db74">      Returns the inactive state of an app.
+</span><span style="color:#e6db74">  set-standby-bucket [--user &lt;USER_ID&gt;] &lt;PACKAGE&gt; active|working_set|frequent|rare
+</span><span style="color:#e6db74">      Puts an app in the standby bucket.
+</span><span style="color:#e6db74">  get-standby-bucket [--user &lt;USER_ID&gt;] &lt;PACKAGE&gt;
+</span><span style="color:#e6db74">      Returns the standby bucket of an app.
+</span><span style="color:#e6db74">  send-trim-memory [--user &lt;USER_ID&gt;] &lt;PROCESS&gt;
+</span><span style="color:#e6db74">          [HIDDEN|RUNNING_MODERATE|BACKGROUND|RUNNING_LOW|MODERATE|RUNNING_CRITICAL|COMPLETE]
+</span><span style="color:#e6db74">      Send a memory trim event to a &lt;PROCESS&gt;.  May also supply a raw trim int level.
+</span><span style="color:#e6db74">  display [COMMAND] [...]: sub-commands for operating on displays.
+</span><span style="color:#e6db74">       move-stack &lt;STACK_ID&gt; &lt;DISPLAY_ID&gt;
+</span><span style="color:#e6db74">           Move &lt;STACK_ID&gt; from its current display to &lt;DISPLAY_ID&gt;.
+</span><span style="color:#e6db74">  stack [COMMAND] [...]: sub-commands for operating on activity stacks.
+</span><span style="color:#e6db74">       start &lt;DISPLAY_ID&gt; &lt;INTENT&gt;
+</span><span style="color:#e6db74">           Start a new activity on &lt;DISPLAY_ID&gt; using &lt;INTENT&gt;
+</span><span style="color:#e6db74">       move-task &lt;TASK_ID&gt; &lt;STACK_ID&gt; [true|false]
+</span><span style="color:#e6db74">           Move &lt;TASK_ID&gt; from its current stack to the top (true) or
+</span><span style="color:#e6db74">           bottom (false) of &lt;STACK_ID&gt;.
+</span><span style="color:#e6db74">       resize &lt;STACK_ID&gt; &lt;LEFT,TOP,RIGHT,BOTTOM&gt;
+</span><span style="color:#e6db74">           Change &lt;STACK_ID&gt; size and position to &lt;LEFT,TOP,RIGHT,BOTTOM&gt;.
+</span><span style="color:#e6db74">       resize-animated &lt;STACK_ID&gt; &lt;LEFT,TOP,RIGHT,BOTTOM&gt;
+</span><span style="color:#e6db74">           Same as resize, but allow animation.
+</span><span style="color:#e6db74">       resize-docked-stack &lt;LEFT,TOP,RIGHT,BOTTOM&gt; [&lt;TASK_LEFT,TASK_TOP,TASK_RIGHT,TASK_BOTTOM&gt;]
+</span><span style="color:#e6db74">           Change docked stack to &lt;LEFT,TOP,RIGHT,BOTTOM&gt;
+</span><span style="color:#e6db74">           and supplying temporary different task bounds indicated by
+</span><span style="color:#e6db74">           &lt;TASK_LEFT,TOP,RIGHT,BOTTOM&gt;
+</span><span style="color:#e6db74">       move-top-activity-to-pinned-stack: &lt;STACK_ID&gt; &lt;LEFT,TOP,RIGHT,BOTTOM&gt;
+</span><span style="color:#e6db74">           Moves the top activity from
+</span><span style="color:#e6db74">           &lt;STACK_ID&gt; to the pinned stack using &lt;LEFT,TOP,RIGHT,BOTTOM&gt; for the
+</span><span style="color:#e6db74">           bounds of the pinned stack.
+</span><span style="color:#e6db74">       positiontask &lt;TASK_ID&gt; &lt;STACK_ID&gt; &lt;POSITION&gt;
+</span><span style="color:#e6db74">           Place &lt;TASK_ID&gt; in &lt;STACK_ID&gt; at &lt;POSITION&gt;
+</span><span style="color:#e6db74">       list
+</span><span style="color:#e6db74">           List all of the activity stacks and their sizes.
+</span><span style="color:#e6db74">       info &lt;WINDOWING_MODE&gt; &lt;ACTIVITY_TYPE&gt;
+</span><span style="color:#e6db74">           Display the information about activity stack in &lt;WINDOWING_MODE&gt; and &lt;ACTIVITY_TYPE&gt;.
+</span><span style="color:#e6db74">       remove &lt;STACK_ID&gt;
+</span><span style="color:#e6db74">           Remove stack &lt;STACK_ID&gt;.
+</span><span style="color:#e6db74">  task [COMMAND] [...]: sub-commands for operating on activity tasks.
+</span><span style="color:#e6db74">       lock &lt;TASK_ID&gt;
+</span><span style="color:#e6db74">           Bring &lt;TASK_ID&gt; to the front and don&#39;</span>t allow other tasks to run.
+       lock stop
+           End the current task lock.
+       resizeable &lt;TASK_ID&gt; <span style="color:#f92672">[</span>0|1|2|3<span style="color:#f92672">]</span>
+           Change resizeable mode of &lt;TASK_ID&gt; to one of the following:
+           0: unresizeable
+           1: crop_windows
+           2: resizeable
+           3: resizeable_and_pipable
+       resize &lt;TASK_ID&gt; &lt;LEFT,TOP,RIGHT,BOTTOM&gt;
+           Makes sure &lt;TASK_ID&gt; is in a stack with the specified bounds.
+           Forces the task to be resizeable and creates a stack <span style="color:#66d9ef">if</span> no existing stack
+           has the specified bounds.
+  update-appinfo &lt;USER_ID&gt; &lt;PACKAGE_NAME&gt; <span style="color:#f92672">[</span>&lt;PACKAGE_NAME&gt;...<span style="color:#f92672">]</span>
+      Update the ApplicationInfo objects of the listed packages <span style="color:#66d9ef">for</span> &lt;USER_ID&gt;
+      without restarting any processes.
+  write
+      Write all pending state to storage.
+
+&lt;INTENT&gt; specifications include these flags and arguments:
+    <span style="color:#f92672">[</span>-a &lt;ACTION&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-d &lt;DATA_URI&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-t &lt;MIME_TYPE&gt;<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>-c &lt;CATEGORY&gt; <span style="color:#f92672">[</span>-c &lt;CATEGORY&gt;<span style="color:#f92672">]</span> ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>-n &lt;COMPONENT_NAME&gt;<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>-e|--es &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--esn &lt;EXTRA_KEY&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--ez &lt;EXTRA_KEY&gt; &lt;EXTRA_BOOLEAN_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--ei &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--el &lt;EXTRA_KEY&gt; &lt;EXTRA_LONG_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--ef &lt;EXTRA_KEY&gt; &lt;EXTRA_FLOAT_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--eu &lt;EXTRA_KEY&gt; &lt;EXTRA_URI_VALUE&gt; ...<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--ecn &lt;EXTRA_KEY&gt; &lt;EXTRA_COMPONENT_NAME_VALUE&gt;<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--eia &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_INT_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as Integer<span style="color:#f92672">[])</span>
+    <span style="color:#f92672">[</span>--eial &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_INT_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as List&lt;Integer&gt;<span style="color:#f92672">)</span>
+    <span style="color:#f92672">[</span>--ela &lt;EXTRA_KEY&gt; &lt;EXTRA_LONG_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_LONG_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as Long<span style="color:#f92672">[])</span>
+    <span style="color:#f92672">[</span>--elal &lt;EXTRA_KEY&gt; &lt;EXTRA_LONG_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_LONG_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as List&lt;Long&gt;<span style="color:#f92672">)</span>
+    <span style="color:#f92672">[</span>--efa &lt;EXTRA_KEY&gt; &lt;EXTRA_FLOAT_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_FLOAT_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as Float<span style="color:#f92672">[])</span>
+    <span style="color:#f92672">[</span>--efal &lt;EXTRA_KEY&gt; &lt;EXTRA_FLOAT_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_FLOAT_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as List&lt;Float&gt;<span style="color:#f92672">)</span>
+    <span style="color:#f92672">[</span>--esa &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_STRING_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as String<span style="color:#f92672">[]</span>; to embed a comma into a string,
+         escape it using <span style="color:#e6db74">&#34;\,&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">[</span>--esal &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt;<span style="color:#f92672">[</span>,&lt;EXTRA_STRING_VALUE...<span style="color:#f92672">]]</span>
+        <span style="color:#f92672">(</span>mutiple extras passed as List&lt;String&gt;; to embed a comma into a string,
+         escape it using <span style="color:#e6db74">&#34;\,&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">[</span>-f &lt;FLAG&gt;<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--grant-read-uri-permission<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--grant-write-uri-permission<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--grant-persistable-uri-permission<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--grant-prefix-uri-permission<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--debug-log-resolution<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--exclude-stopped-packages<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--include-stopped-packages<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-brought-to-front<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-clear-top<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-clear-when-task-reset<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-exclude-from-recents<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-launched-from-history<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-multiple-task<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-no-animation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-no-history<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-no-user-action<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-previous-is-top<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-reorder-to-front<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-reset-task-if-needed<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-single-top<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-clear-task<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--activity-task-on-home<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--activity-match-external<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--receiver-registered-only<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--receiver-replace-pending<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--receiver-foreground<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--receiver-no-abort<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--receiver-include-background<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>--selector<span style="color:#f92672">]</span>
+    <span style="color:#f92672">[</span>&lt;URI&gt; | &lt;PACKAGE&gt; | &lt;COMPONENT&gt;<span style="color:#f92672">]</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/a7fac38f701bb989e6c83fa14bba4e07eef04c51" title='Last modified by rentianyu | December 15, 2020' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>December 15, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/rentianyu/adb-translate/edit/main/content//docs/am.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents"></nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

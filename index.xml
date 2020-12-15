@@ -2,202 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>项目介绍 on ADB 翻译文档</title>
-    <link>https://rentianyu.github.io/adb-translate/</link>
+    <link>/</link>
     <description>Recent content in 项目介绍 on ADB 翻译文档</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate>
     
-	<atom:link href="https://rentianyu.github.io/adb-translate/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Adb</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/adb/</link>
-      <pubDate>Fri, 11 Dec 2020 21:02:15 +0800</pubDate>
+      <title></title>
+      <link>/docs/adb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/adb/adb/</guid>
+      <guid>/docs/adb/</guid>
       <description>C:\Users\Admin&amp;gt;adb Android Debug Bridge version 1.0.41 Version 30.0.5-6877874 Installed as C:\Users\Admin\scoop\apps\adb\current\platform-tools\adb.exe global options: -a listen on all network interfaces, not just localhost -d use USB device (error if multiple devices connected) -e use TCP/IP device (error if multiple TCP/IP devices available) -s SERIAL use device with given serial (overrides $ANDROID_SERIAL) -t ID use device with given transport id -H name of adb server host [default=localhost] -P port of adb server [default=5037] -L SOCKET listen on given socket for adb server [default=tcp:localhost:5037] general commands: devices [-l] list connected devices (-l for long output) help show this help message version show version num networking: connect HOST[:PORT] connect to a device via TCP/IP [default port=5555] disconnect [HOST[:PORT]] disconnect from given TCP/IP device [default port=5555], or all pair HOST[:PORT] [PAIRING CODE] pair with a device for secure TCP/IP communication forward --list list all forward socket connections forward [--no-rebind] LOCAL REMOTE forward socket connection using: tcp:&amp;lt;port&amp;gt; (&amp;lt;local&amp;gt; may be &amp;#34;tcp:0&amp;#34; to pick any open port) localabstract:&amp;lt;unix domain socket name&amp;gt; localreserved:&amp;lt;unix domain socket name&amp;gt; localfilesystem:&amp;lt;unix domain socket name&amp;gt; dev:&amp;lt;character device name&amp;gt; jdwp:&amp;lt;process pid&amp;gt; (remote only) acceptfd:&amp;lt;fd&amp;gt; (listen only) forward --remove LOCAL remove specific forward socket connection forward --remove-all remove all forward socket connections ppp TTY [PARAMETER.</description>
     </item>
     
     <item>
-      <title>Wm</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/wm/</link>
-      <pubDate>Fri, 11 Dec 2020 20:59:03 +0800</pubDate>
+      <title></title>
+      <link>/docs/am/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/adb/wm/</guid>
-      <description>:/system/bin # wm Window manager (window) commands: help Print this help text. size [reset|WxH|WdpxHdp] Return or override display size. width and height in pixels unless suffixed with &amp;#39;dp&amp;#39;. density [reset|DENSITY] Return or override display density. overscan [reset|LEFT,TOP,RIGHT,BOTTOM] Set overscan area for display. scaling [off|auto] Set display scaling mode. dismiss-keyguard Dismiss the keyguard, prompting user for auth if necessary. </description>
-    </item>
-    
-    <item>
-      <title>Toybox</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/toybox/</link>
-      <pubDate>Fri, 11 Dec 2020 20:59:01 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/toybox/</guid>
-      <description>:/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat </description>
-    </item>
-    
-    <item>
-      <title>Settings</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/settings/</link>
-      <pubDate>Fri, 11 Dec 2020 20:59:00 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/settings/</guid>
-      <description>:/system/bin # settings Settings provider (settings) commands: help Print this help text. get [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY Retrieve the current value of KEY. put [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY VALUE [TAG] [default] Change the contents of KEY to VALUE. TAG to associate with the setting. {default} to set as the default, case-insensitive only for global/secure namespace delete NAMESPACE KEY Delete the entry for KEY. reset [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE {PACKAGE_NAME | RESET_MODE} Reset the global/secure table for a package with mode.</description>
-    </item>
-    
-    <item>
-      <title>Svc</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/svc/</link>
-      <pubDate>Fri, 11 Dec 2020 20:59:00 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/svc/</guid>
-      <description>:/system/bin # svc Available commands: help Show information about the subcommands power Control the power manager data Control mobile data connectivity wifi Control the Wi-Fi manager usb Control Usb state nfc Control NFC functions bluetooth Control Bluetooth service </description>
-    </item>
-    
-    <item>
-      <title>Telecom</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/telecom/</link>
-      <pubDate>Fri, 11 Dec 2020 20:59:00 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/telecom/</guid>
-      <description>:/system/bin # telecom usage: telecom [subcommand] [options] usage: telecom set-phone-account-enabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-phone-account-disabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom register-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; usage: telecom register-sim-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; &amp;lt;ADDRESS&amp;gt; usage: telecom unregister-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-default-dialer &amp;lt;PACKAGE&amp;gt; usage: telecom get-default-dialer usage: telecom get-system-dialer usage: telecom wait-on-handlers telecom set-phone-account-enabled: Enables the given phone account, if it has already been registered with Telecom. telecom set-phone-account-disabled: Disables the given phone account, if it has already been registered with telecom.</description>
-    </item>
-    
-    <item>
-      <title>Screenrecord</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/screenrecord/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:59 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/screenrecord/</guid>
-      <description>:/system/bin # screenrecord --help Usage: screenrecord [options] &amp;lt;filename&amp;gt; Android screenrecord v1.2. Records the device&amp;#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &amp;#34;1280x720&amp;#34;. Default is the device&amp;#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.</description>
-    </item>
-    
-    <item>
-      <title>Service</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/service/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:59 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/service/</guid>
-      <description>:/system/bin # service -h Usage: service [-h|-?] service list service check SERVICE service call SERVICE CODE [i32 N | i64 N | f N | d N | s16 STR ] ... Options: i32: Write the 32-bit integer N into the send parcel. i64: Write the 64-bit integer N into the send parcel. f: Write the 32-bit single-precision number N into the send parcel. d: Write the 64-bit double-precision number N into the send parcel.</description>
-    </item>
-    
-    <item>
-      <title>Setenforce</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/setenforce/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:59 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/setenforce/</guid>
-      <description>:/system/bin # setenforce --help usage: setenforce [enforcing|permissive|1|0] Sets whether SELinux is enforcing (1) or permissive (0). </description>
-    </item>
-    
-    <item>
-      <title>Setprop</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/setprop/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:59 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/setprop/</guid>
-      <description>:/system/bin # setprop --help usage: setprop NAME VALUE Sets an Android system property. </description>
-    </item>
-    
-    <item>
-      <title>Logcat</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/logcat/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:58 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/logcat/</guid>
-      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; -f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
-    </item>
-    
-    <item>
-      <title>Pm</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/pm/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:58 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/pm/</guid>
-      <description>:/system/bin # pm Package manager (package) commands: help Print this help text. path [--user USER_ID] PACKAGE Print the path to the .apk of the given PACKAGE. dump PACKAGE Print various system state associated with the given PACKAGE. list features Prints all features of the system. has-feature FEATURE_NAME [version] Prints true and returns exit status 0 when system has a FEATURE_NAME, otherwise prints false and returns exit status 1 list instrumentation [-f] [TARGET-PACKAGE] Prints all test packages; optionally only those targeting TARGET-PACKAGE Options: -f: dump the name of the .</description>
-    </item>
-    
-    <item>
-      <title>Screencap</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/screencap/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:58 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/screencap/</guid>
-      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] -h: this message -p: save the file as a png. -d: specify the display id to capture, default 0. If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. </description>
-    </item>
-    
-    <item>
-      <title>Cmd</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/cmd/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:57 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/cmd/</guid>
-      <description>:/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media.</description>
-    </item>
-    
-    <item>
-      <title>Dpm</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/dpm/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:57 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/dpm/</guid>
-      <description>:/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-device-owner [ --user &amp;lt;USER_ID&amp;gt; | current *EXPERIMENTAL* ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-profile-owner [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm remove-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; dpm set-active-admin: Sets the given component as active admin for an existing user.</description>
-    </item>
-    
-    <item>
-      <title>Dumpsys</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/dumpsys/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:57 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/dumpsys/</guid>
-      <description>:/system/bin # dumpsys --help usage: dumpsys To dump all services. or: dumpsys [-t TIMEOUT] [--priority LEVEL] [--help | -l | --skip SERVICES | SERVICE [ARGS]] --help: shows this help -l: only list services, do not dump them -t TIMEOUT_SEC: TIMEOUT to use in seconds instead of default 10 seconds -T TIMEOUT_MS: TIMEOUT to use in milliseconds instead of default 10 seconds --proto: filter services that support dumping data in proto format.</description>
-    </item>
-    
-    <item>
-      <title>Getprop</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/getprop/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:57 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/getprop/</guid>
-      <description>:/system/bin # getprop --help usage: getprop [-TZ] [NAME [DEFAULT]] Gets an Android system property, or lists them all. -T Show property types instead of values -Z Show property contexts instead of values </description>
-    </item>
-    
-    <item>
-      <title>Am</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/am/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:56 +0800</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/adb/am/</guid>
+      <guid>/docs/am/</guid>
       <description>:/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &amp;lt;FILE&amp;gt;] [--start-profiler &amp;lt;FILE&amp;gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &amp;lt;USER_ID&amp;gt; | current] &amp;lt;INTENT&amp;gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &amp;lt;FILE&amp;gt;: start profiler and send results to &amp;lt;FILE&amp;gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &amp;lt;FILE&amp;gt;: like above, but profiling stops when app goes idle --attach-agent &amp;lt;agent&amp;gt;: attach the given agent before binding --attach-agent-bind &amp;lt;agent&amp;gt;: attach the given agent during binding -R: repeat the activity launch &amp;lt;COUNT&amp;gt; times.</description>
     </item>
     
     <item>
-      <title>Appops</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/appops/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:56 +0800</pubDate>
+      <title></title>
+      <link>/docs/appops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/adb/appops/</guid>
+      <guid>/docs/appops/</guid>
       <description>:/system/bin # appops AppOps service (appops) commands: help Print this help text. start [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; Starts a given operation for a particular application. stop [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; Stops a given operation for a particular application. set [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; &amp;lt;MODE&amp;gt; Set the mode for a particular application and operation. get [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; [&amp;lt;OP&amp;gt;] Return the mode for a particular application and optional operation.</description>
     </item>
     
     <item>
-      <title>Busybox</title>
-      <link>https://rentianyu.github.io/adb-translate/adb/busybox/</link>
-      <pubDate>Fri, 11 Dec 2020 20:58:56 +0800</pubDate>
+      <title></title>
+      <link>/docs/busybox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/adb/busybox/</guid>
+      <guid>/docs/busybox/</guid>
       <description>:/system/bin # busybox BusyBox v1.31.1-osm0sis (2020-05-06 20:45:25 ADT) multi-call binary. BusyBox is copyrighted by many authors between 1998-2015. Licensed under GPLv2. See source distribution for detailed copyright notices. Usage: busybox [function [arguments]...] or: busybox --list[-full] or: busybox --show SCRIPT or: busybox --install [-s] [DIR] or: function [arguments]... BusyBox is a multi-call binary that combines many common Unix utilities into a single executable. Most people will create a link to busybox for each function they wish to use and BusyBox will act like whatever it was invoked as.</description>
     </item>
     
     <item>
-      <title>关于</title>
-      <link>https://rentianyu.github.io/adb-translate/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>/docs/cmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/about/</guid>
-      <description>暂时不知道写啥，先空着吧</description>
+      <guid>/docs/cmd/</guid>
+      <description>:/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/dpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dpm/</guid>
+      <description>:/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-device-owner [ --user &amp;lt;USER_ID&amp;gt; | current *EXPERIMENTAL* ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-profile-owner [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm remove-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; dpm set-active-admin: Sets the given component as active admin for an existing user.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/dumpsys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/dumpsys/</guid>
+      <description>:/system/bin # dumpsys --help usage: dumpsys To dump all services. or: dumpsys [-t TIMEOUT] [--priority LEVEL] [--help | -l | --skip SERVICES | SERVICE [ARGS]] --help: shows this help -l: only list services, do not dump them -t TIMEOUT_SEC: TIMEOUT to use in seconds instead of default 10 seconds -T TIMEOUT_MS: TIMEOUT to use in milliseconds instead of default 10 seconds --proto: filter services that support dumping data in proto format.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/getprop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/getprop/</guid>
+      <description>:/system/bin # getprop --help usage: getprop [-TZ] [NAME [DEFAULT]] Gets an Android system property, or lists them all. -T Show property types instead of values -Z Show property contexts instead of values </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/logcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/logcat/</guid>
+      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; -f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/pm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pm/</guid>
+      <description>:/system/bin # pm Package manager (package) commands: help Print this help text. path [--user USER_ID] PACKAGE Print the path to the .apk of the given PACKAGE. dump PACKAGE Print various system state associated with the given PACKAGE. list features Prints all features of the system. has-feature FEATURE_NAME [version] Prints true and returns exit status 0 when system has a FEATURE_NAME, otherwise prints false and returns exit status 1 list instrumentation [-f] [TARGET-PACKAGE] Prints all test packages; optionally only those targeting TARGET-PACKAGE Options: -f: dump the name of the .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/screencap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/screencap/</guid>
+      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] -h: this message -p: save the file as a png. -d: specify the display id to capture, default 0. If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/screenrecord/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/screenrecord/</guid>
+      <description>:/system/bin # screenrecord --help Usage: screenrecord [options] &amp;lt;filename&amp;gt; Android screenrecord v1.2. Records the device&amp;#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &amp;#34;1280x720&amp;#34;. Default is the device&amp;#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/service/</guid>
+      <description>:/system/bin # service -h Usage: service [-h|-?] service list service check SERVICE service call SERVICE CODE [i32 N | i64 N | f N | d N | s16 STR ] ... Options: i32: Write the 32-bit integer N into the send parcel. i64: Write the 64-bit integer N into the send parcel. f: Write the 32-bit single-precision number N into the send parcel. d: Write the 64-bit double-precision number N into the send parcel.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/setenforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/setenforce/</guid>
+      <description>:/system/bin # setenforce --help usage: setenforce [enforcing|permissive|1|0] Sets whether SELinux is enforcing (1) or permissive (0). </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/setprop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/setprop/</guid>
+      <description>:/system/bin # setprop --help usage: setprop NAME VALUE Sets an Android system property. </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/settings/</guid>
+      <description>:/system/bin # settings Settings provider (settings) commands: help Print this help text. get [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY Retrieve the current value of KEY. put [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY VALUE [TAG] [default] Change the contents of KEY to VALUE. TAG to associate with the setting. {default} to set as the default, case-insensitive only for global/secure namespace delete NAMESPACE KEY Delete the entry for KEY. reset [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE {PACKAGE_NAME | RESET_MODE} Reset the global/secure table for a package with mode.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/svc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/svc/</guid>
+      <description>:/system/bin # svc Available commands: help Show information about the subcommands power Control the power manager data Control mobile data connectivity wifi Control the Wi-Fi manager usb Control Usb state nfc Control NFC functions bluetooth Control Bluetooth service </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/telecom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/telecom/</guid>
+      <description>:/system/bin # telecom usage: telecom [subcommand] [options] usage: telecom set-phone-account-enabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-phone-account-disabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom register-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; usage: telecom register-sim-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; &amp;lt;ADDRESS&amp;gt; usage: telecom unregister-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-default-dialer &amp;lt;PACKAGE&amp;gt; usage: telecom get-default-dialer usage: telecom get-system-dialer usage: telecom wait-on-handlers telecom set-phone-account-enabled: Enables the given phone account, if it has already been registered with Telecom. telecom set-phone-account-disabled: Disables the given phone account, if it has already been registered with telecom.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/toybox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/toybox/</guid>
+      <description>:/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/wm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wm/</guid>
+      <description>:/system/bin # wm Window manager (window) commands: help Print this help text. size [reset|WxH|WdpxHdp] Return or override display size. width and height in pixels unless suffixed with &amp;#39;dp&amp;#39;. density [reset|DENSITY] Return or override display density. overscan [reset|LEFT,TOP,RIGHT,BOTTOM] Set overscan area for display. scaling [off|auto] Set display scaling mode. dismiss-keyguard Dismiss the keyguard, prompting user for auth if necessary. </description>
     </item>
     
   </channel>
