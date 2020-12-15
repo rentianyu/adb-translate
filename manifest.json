@@ -1,14 +1,14 @@
 {
   "name": "ADB 翻译文档",
   "short_name": "ADB 翻译文档",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/adb-translate/",
+  "scope": "/adb-translate/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/adb-translate/favicon.svg",
       "sizes": "512x512"
     }
   ]

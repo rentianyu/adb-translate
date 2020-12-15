@@ -3,121 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/adb/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/adb/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/am/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/am/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/appops/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/appops/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/busybox/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/busybox/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/cmd/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/cmd/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/dpm/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/dpm/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/dumpsys/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/dumpsys/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/getprop/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/getprop/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/logcat/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/logcat/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/pm/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/pm/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/screencap/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/screencap/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/screenrecord/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/screenrecord/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/service/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/service/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/setenforce/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/setenforce/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/setprop/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/setprop/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/settings/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/settings/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/svc/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/svc/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/telecom/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/telecom/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/toybox/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/toybox/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/wm/</loc>
-    <lastmod>2020-12-15T18:24:14+08:00</lastmod>
+    <loc>./adb-translate/docs/wm/</loc>
+    <lastmod>2020-12-15T18:28:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>./adb-translate/categories/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>./adb-translate/tags/</loc>
   </url>
   
 </urlset>
