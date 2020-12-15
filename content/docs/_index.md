@@ -1,0 +1,30 @@
+---
+bookFlatSection: true
+---
+
+| 命令                         | 英文             | 翻译         |
+| ---------------------------- | ---------------- | ------------ |
+| [am](am)                     | Activity manager | 活动管理器   |
+| [appops](appops)             | AppOps service   | 软件权限服务 |
+| [busybox](busybox)           |                  |              |
+| [cmd](cmd)                   |                  |              |
+| [dpm](dpm)                   |                  |              |
+| [dumpsys](dumpsys)           |                  |              |
+| [getprop](getprop)           |                  |              |
+| [logcat](logcat)             |                  |              |
+| [pm](pm)                     | Package manager  | 软件包管理器 |
+| [screencap](screencap)       |                  |              |
+| [screenrecord](screenrecord) |                  |              |
+| [service](service)           |                  |              |
+| [setenforce](setenforce)     |                  |              |
+| [setprop](setprop)           |                  |              |
+| [settings](settings)         |                  |              |
+| [svc](svc)                   |                  |              |
+| [telecom](telecom)           |                  |              |
+| [toybox](toybox)             |                  |              |
+| [wm](wm)                     |                  |              |
+|                              |                  |              |
+|                              |                  |              |
+|                              |                  |              |
+|                              |                  |              |
+|                              |                  |              |
