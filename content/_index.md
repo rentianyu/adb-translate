@@ -1,11 +1,3 @@
----
-date: 2017-10-19T15:26:15Z
-lastmod: 2019-10-26T15:26:15Z
-publishdate: 2018-11-23T15:26:15Z
-
-title: "项目介绍"
----
-
 # adb-translate
 - 项目地址：[https://github.com/rentianyu/adb-translate](https://github.com/rentianyu/adb-translate)
 
