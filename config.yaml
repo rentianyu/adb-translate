@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: http://127.0.0.1/adb-translate
+baseURL: 127.0.0.1/adb-translate
 title: ADB 翻译文档
 theme: book
 
