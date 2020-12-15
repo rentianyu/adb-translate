@@ -12,47 +12,101 @@
     
     <item>
       <title></title>
-      <link>https://rentianyu.github.io/adb-translate/adb/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/adb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/adb/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/adb/</guid>
       <description>C:\Users\Admin&amp;gt;adb Android Debug Bridge version 1.0.41 Version 30.0.5-6877874 Installed as C:\Users\Admin\scoop\apps\adb\current\platform-tools\adb.exe global options: -a listen on all network interfaces, not just localhost -d use USB device (error if multiple devices connected) -e use TCP/IP device (error if multiple TCP/IP devices available) -s SERIAL use device with given serial (overrides $ANDROID_SERIAL) -t ID use device with given transport id -H name of adb server host [default=localhost] -P port of adb server [default=5037] -L SOCKET listen on given socket for adb server [default=tcp:localhost:5037] general commands: devices [-l] list connected devices (-l for long output) help show this help message version show version num networking: connect HOST[:PORT] connect to a device via TCP/IP [default port=5555] disconnect [HOST[:PORT]] disconnect from given TCP/IP device [default port=5555], or all pair HOST[:PORT] [PAIRING CODE] pair with a device for secure TCP/IP communication forward --list list all forward socket connections forward [--no-rebind] LOCAL REMOTE forward socket connection using: tcp:&amp;lt;port&amp;gt; (&amp;lt;local&amp;gt; may be &amp;#34;tcp:0&amp;#34; to pick any open port) localabstract:&amp;lt;unix domain socket name&amp;gt; localreserved:&amp;lt;unix domain socket name&amp;gt; localfilesystem:&amp;lt;unix domain socket name&amp;gt; dev:&amp;lt;character device name&amp;gt; jdwp:&amp;lt;process pid&amp;gt; (remote only) acceptfd:&amp;lt;fd&amp;gt; (listen only) forward --remove LOCAL remove specific forward socket connection forward --remove-all remove all forward socket connections ppp TTY [PARAMETER.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rentianyu.github.io/adb-translate/am/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/am/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/am/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/am/</guid>
       <description>:/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &amp;lt;FILE&amp;gt;] [--start-profiler &amp;lt;FILE&amp;gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &amp;lt;USER_ID&amp;gt; | current] &amp;lt;INTENT&amp;gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &amp;lt;FILE&amp;gt;: start profiler and send results to &amp;lt;FILE&amp;gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &amp;lt;FILE&amp;gt;: like above, but profiling stops when app goes idle --attach-agent &amp;lt;agent&amp;gt;: attach the given agent before binding --attach-agent-bind &amp;lt;agent&amp;gt;: attach the given agent during binding -R: repeat the activity launch &amp;lt;COUNT&amp;gt; times.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rentianyu.github.io/adb-translate/appops/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/appops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/appops/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/appops/</guid>
       <description>:/system/bin # appops AppOps service (appops) commands: help Print this help text. start [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; Starts a given operation for a particular application. stop [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; Stops a given operation for a particular application. set [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; &amp;lt;OP&amp;gt; &amp;lt;MODE&amp;gt; Set the mode for a particular application and operation. get [--user &amp;lt;USER_ID&amp;gt;] &amp;lt;PACKAGE | UID&amp;gt; [&amp;lt;OP&amp;gt;] Return the mode for a particular application and optional operation.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rentianyu.github.io/adb-translate/busybox/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/busybox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/busybox/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/busybox/</guid>
       <description>:/system/bin # busybox BusyBox v1.31.1-osm0sis (2020-05-06 20:45:25 ADT) multi-call binary. BusyBox is copyrighted by many authors between 1998-2015. Licensed under GPLv2. See source distribution for detailed copyright notices. Usage: busybox [function [arguments]...] or: busybox --list[-full] or: busybox --show SCRIPT or: busybox --install [-s] [DIR] or: function [arguments]... BusyBox is a multi-call binary that combines many common Unix utilities into a single executable. Most people will create a link to busybox for each function they wish to use and BusyBox will act like whatever it was invoked as.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rentianyu.github.io/adb-translate/cmd/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/cmd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rentianyu.github.io/adb-translate/cmd/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/cmd/</guid>
       <description>:/system/bin # cmd cmd: No service specified; use -l to list all services 20|:/system/bin # cmd -l Currently running services: DockObserver MiuiBackup MiuiInit ProcessManager SurfaceFlinger accessibility account activity alarm android.security.keystore android.service.gatekeeper.IGateKeeperService appops appwidget audio autofill backup battery batteryproperties batterystats binder_calls_stats bluetooth_manager carrier_config clipboard cneservice com.goodix.FingerprintService com.qualcomm.location.izat.IzatService commontime_management companiondevice connectivity connmetrics consumer_ir content contexthub country_detector cpuinfo crossprofileapps dbinfo device_identifiers device_policy deviceidle devicestoragemonitor diskstats display dpmservice dreams drm.drmManager dropbox ethernet extphone fingerprint gfxinfo gpu graphicsstats hardware_properties imms incident input input_method installd iphonesubinfo ipsec isms isub jobscheduler launcherapps location locationpolicy lock_settings media.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/dpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/dpm/</guid>
+      <description>:/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-device-owner [ --user &amp;lt;USER_ID&amp;gt; | current *EXPERIMENTAL* ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-profile-owner [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm remove-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; dpm set-active-admin: Sets the given component as active admin for an existing user.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/dumpsys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/dumpsys/</guid>
+      <description>:/system/bin # dumpsys --help usage: dumpsys To dump all services. or: dumpsys [-t TIMEOUT] [--priority LEVEL] [--help | -l | --skip SERVICES | SERVICE [ARGS]] --help: shows this help -l: only list services, do not dump them -t TIMEOUT_SEC: TIMEOUT to use in seconds instead of default 10 seconds -T TIMEOUT_MS: TIMEOUT to use in milliseconds instead of default 10 seconds --proto: filter services that support dumping data in proto format.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/getprop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/getprop/</guid>
+      <description>:/system/bin # getprop --help usage: getprop [-TZ] [NAME [DEFAULT]] Gets an Android system property, or lists them all. -T Show property types instead of values -Z Show property contexts instead of values </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/logcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/logcat/</guid>
+      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; -f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/pm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/pm/</guid>
+      <description>:/system/bin # pm Package manager (package) commands: help Print this help text. path [--user USER_ID] PACKAGE Print the path to the .apk of the given PACKAGE. dump PACKAGE Print various system state associated with the given PACKAGE. list features Prints all features of the system. has-feature FEATURE_NAME [version] Prints true and returns exit status 0 when system has a FEATURE_NAME, otherwise prints false and returns exit status 1 list instrumentation [-f] [TARGET-PACKAGE] Prints all test packages; optionally only those targeting TARGET-PACKAGE Options: -f: dump the name of the .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/screencap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/screencap/</guid>
+      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] -h: this message -p: save the file as a png. -d: specify the display id to capture, default 0. If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. </description>
     </item>
     
     <item>
@@ -134,60 +188,6 @@
       
       <guid>https://rentianyu.github.io/adb-translate/docs/wm/</guid>
       <description>:/system/bin # wm Window manager (window) commands: help Print this help text. size [reset|WxH|WdpxHdp] Return or override display size. width and height in pixels unless suffixed with &amp;#39;dp&amp;#39;. density [reset|DENSITY] Return or override display density. overscan [reset|LEFT,TOP,RIGHT,BOTTOM] Set overscan area for display. scaling [off|auto] Set display scaling mode. dismiss-keyguard Dismiss the keyguard, prompting user for auth if necessary. </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/dpm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/dpm/</guid>
-      <description>:/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-device-owner [ --user &amp;lt;USER_ID&amp;gt; | current *EXPERIMENTAL* ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm set-profile-owner [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; usage: dpm remove-active-admin [ --user &amp;lt;USER_ID&amp;gt; | current ] [ --name &amp;lt;NAME&amp;gt; ] &amp;lt;COMPONENT&amp;gt; dpm set-active-admin: Sets the given component as active admin for an existing user.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/dumpsys/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/dumpsys/</guid>
-      <description>:/system/bin # dumpsys --help usage: dumpsys To dump all services. or: dumpsys [-t TIMEOUT] [--priority LEVEL] [--help | -l | --skip SERVICES | SERVICE [ARGS]] --help: shows this help -l: only list services, do not dump them -t TIMEOUT_SEC: TIMEOUT to use in seconds instead of default 10 seconds -T TIMEOUT_MS: TIMEOUT to use in milliseconds instead of default 10 seconds --proto: filter services that support dumping data in proto format.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/getprop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/getprop/</guid>
-      <description>:/system/bin # getprop --help usage: getprop [-TZ] [NAME [DEFAULT]] Gets an Android system property, or lists them all. -T Show property types instead of values -Z Show property contexts instead of values </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/logcat/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/logcat/</guid>
-      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; -f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/pm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/pm/</guid>
-      <description>:/system/bin # pm Package manager (package) commands: help Print this help text. path [--user USER_ID] PACKAGE Print the path to the .apk of the given PACKAGE. dump PACKAGE Print various system state associated with the given PACKAGE. list features Prints all features of the system. has-feature FEATURE_NAME [version] Prints true and returns exit status 0 when system has a FEATURE_NAME, otherwise prints false and returns exit status 1 list instrumentation [-f] [TARGET-PACKAGE] Prints all test packages; optionally only those targeting TARGET-PACKAGE Options: -f: dump the name of the .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rentianyu.github.io/adb-translate/screencap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rentianyu.github.io/adb-translate/screencap/</guid>
-      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] -h: this message -p: save the file as a png. -d: specify the display id to capture, default 0. If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. </description>
     </item>
     
   </channel>
