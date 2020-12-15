@@ -1,0 +1,1 @@
+if(navigator.serviceWorker){navigator.serviceWorker.register("/adb-translate/sw.js",{scope:"/adb-translate/"});}

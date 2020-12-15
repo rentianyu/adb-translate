@@ -2,91 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ADB 翻译文档</title>
-    <link>/docs/</link>
+    <link>https://rentianyu.github.io/adb-translate/docs/</link>
     <description>Recent content on ADB 翻译文档</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rentianyu.github.io/adb-translate/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/docs/screenrecord/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/screenrecord/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/screenrecord/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/screenrecord/</guid>
       <description>:/system/bin # screenrecord --help Usage: screenrecord [options] &amp;lt;filename&amp;gt; Android screenrecord v1.2. Records the device&amp;#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &amp;#34;1280x720&amp;#34;. Default is the device&amp;#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/service/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/service/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/service/</guid>
       <description>:/system/bin # service -h Usage: service [-h|-?] service list service check SERVICE service call SERVICE CODE [i32 N | i64 N | f N | d N | s16 STR ] ... Options: i32: Write the 32-bit integer N into the send parcel. i64: Write the 64-bit integer N into the send parcel. f: Write the 32-bit single-precision number N into the send parcel. d: Write the 64-bit double-precision number N into the send parcel.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/setenforce/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/setenforce/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setenforce/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/setenforce/</guid>
       <description>:/system/bin # setenforce --help usage: setenforce [enforcing|permissive|1|0] Sets whether SELinux is enforcing (1) or permissive (0). </description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/setprop/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/setprop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setprop/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/setprop/</guid>
       <description>:/system/bin # setprop --help usage: setprop NAME VALUE Sets an Android system property. </description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/settings/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/settings/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/settings/</guid>
       <description>:/system/bin # settings Settings provider (settings) commands: help Print this help text. get [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY Retrieve the current value of KEY. put [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE KEY VALUE [TAG] [default] Change the contents of KEY to VALUE. TAG to associate with the setting. {default} to set as the default, case-insensitive only for global/secure namespace delete NAMESPACE KEY Delete the entry for KEY. reset [--user &amp;lt;USER_ID&amp;gt; | current] NAMESPACE {PACKAGE_NAME | RESET_MODE} Reset the global/secure table for a package with mode.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/svc/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/svc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/svc/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/svc/</guid>
       <description>:/system/bin # svc Available commands: help Show information about the subcommands power Control the power manager data Control mobile data connectivity wifi Control the Wi-Fi manager usb Control Usb state nfc Control NFC functions bluetooth Control Bluetooth service </description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/telecom/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/telecom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/telecom/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/telecom/</guid>
       <description>:/system/bin # telecom usage: telecom [subcommand] [options] usage: telecom set-phone-account-enabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-phone-account-disabled &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom register-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; usage: telecom register-sim-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; &amp;lt;LABEL&amp;gt; &amp;lt;ADDRESS&amp;gt; usage: telecom unregister-phone-account &amp;lt;COMPONENT&amp;gt; &amp;lt;ID&amp;gt; &amp;lt;USER_SN&amp;gt; usage: telecom set-default-dialer &amp;lt;PACKAGE&amp;gt; usage: telecom get-default-dialer usage: telecom get-system-dialer usage: telecom wait-on-handlers telecom set-phone-account-enabled: Enables the given phone account, if it has already been registered with Telecom. telecom set-phone-account-disabled: Disables the given phone account, if it has already been registered with telecom.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/toybox/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/toybox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/toybox/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/toybox/</guid>
       <description>:/system/bin # toybox acpi base64 basename blkid blockdev cal cat chattr chcon chgrp chmod chown chroot chrt cksum clear cmp comm cp cpio cut date dd df diff dirname dmesg dos2unix du echo egrep env expand expr fallocate false fgrep file find flock fmt free freeramdisk fsfreeze getenforce getfattr grep groups gunzip gzip head help hostname hwclock id ifconfig inotifyd insmod install ionice iorenice iotop kill killall ln load_policy log logname losetup ls lsattr lsmod lsof lspci lsusb makedevs md5sum microcom mkdir mkfifo mknod mkswap mktemp modinfo modprobe more mount mountpoint mv nbd-client nc netcat netstat nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill pmap printenv printf ps pwd pwdx readlink realpath renice restorecon rev rfkill rm rmdir rmmod runcon sed sendevent seq setenforce setfattr setprop setsid sha1sum sha224sum sha256sum sha384sum sha512sum sleep sort split start stat stop strings stty swapoff swapon sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat wc which whoami xargs xxd yes zcat </description>
     </item>
     
     <item>
       <title></title>
-      <link>/docs/wm/</link>
+      <link>https://rentianyu.github.io/adb-translate/docs/wm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/wm/</guid>
+      <guid>https://rentianyu.github.io/adb-translate/docs/wm/</guid>
       <description>:/system/bin # wm Window manager (window) commands: help Print this help text. size [reset|WxH|WdpxHdp] Return or override display size. width and height in pixels unless suffixed with &amp;#39;dp&amp;#39;. density [reset|DENSITY] Return or override display density. overscan [reset|LEFT,TOP,RIGHT,BOTTOM] Set overscan area for display. scaling [off|auto] Set display scaling mode. dismiss-keyguard Dismiss the keyguard, prompting user for auth if necessary. </description>
     </item>
     
