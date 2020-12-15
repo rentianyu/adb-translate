@@ -6,7 +6,7 @@
 
 此开源项目由QQ群773276432发起的ADB有关命令的翻译及其使用，目前还在建设中，希望大家能够贡献自己的一份力量，使之成为将来ADB命令的查询手册，方便大家查询。加油吧，搞机人！
 
-**本`adb`翻译文档网址：[https://rentianyu.github.io/adb-translate](ht、tps://rentianyu.github.io/adb-translate)**
+**本`adb`翻译文档网址：[https://rentianyu.github.io/adb-translate/](https://rentianyu.github.io/adb-translate/)**
 
 ## 二、项目介绍
 
