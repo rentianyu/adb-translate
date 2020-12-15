@@ -12,7 +12,8 @@ jobs:
 
       - name: Build gh-pages
         run: |
-          sudo apt-get install hugo
+          sudo apt-get update -y
+          sudo apt-get install hugo -y
           hugo version
           hugo
 
