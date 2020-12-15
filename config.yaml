@@ -1,7 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: ./adb-translate/
-title: Hugo Book
+baseURL: http://127.0.0.1/adb-translate
+title: ADB 翻译文档
 theme: book
 
 # Book configuration
@@ -74,7 +74,7 @@ params:
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Edit path must point to root directory of repo.
-  BookEditPath: edit/master/exampleSite
+  BookEditPath: edit/main/content
 
   # Configure the date format used on the pages
   # - In git information
