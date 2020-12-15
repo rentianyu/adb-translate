@@ -13,6 +13,7 @@ jobs:
       - name: Build gh-pages
         run: |
           sudo apt install hugo
+          hugo version
           hugo
 
       - name: Deploy gh-pages

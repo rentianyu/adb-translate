@@ -1,8 +1,8 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: https://example.com/
+#baseURL: https://rentianyu.github.io/adb-translate/
 title: Hugo Book
-theme: hugo-book
+theme: book
 
 # Book configuration
 disablePathToLower: true
@@ -20,25 +20,25 @@ markup:
 # There are different options to translate files
 # See https://gohugo.io/content-management/multilingual/#translation-by-filename
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-languages:
-  en:
-    languageName: English
-    contentDir: content
-    weight: 1
-  ru:
-    languageName: Russian
-    contentDir: content.ru
-    weight: 2
-  zh:
-    languageName: Chinese
-    contentDir: content.zh
-    weight: 3
+# languages:
+#   en:
+#     languageName: English
+#     contentDir: content
+#     weight: 1
+#   ru:
+#     languageName: Russian
+#     contentDir: content.ru
+#     weight: 2
+#   zh:
+#     languageName: Chinese
+#     contentDir: content.zh
+#     weight: 3
 
 menu:
   # before: []
   after:
     - name: "Github"
-      url: "https://github.com/alex-shpak/hugo-book"
+      url: "https://github.com/rentianyu/adb-translate"
       weight: 10
     - name: "Hugo Themes"
       url: "https://themes.gohugo.io/hugo-book/"
