@@ -1,6 +1,6 @@
 {
-  "name": "ADB 翻译文档",
-  "short_name": "ADB 翻译文档",
+  "name": "Hugo Book",
+  "short_name": "Hugo Book",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
