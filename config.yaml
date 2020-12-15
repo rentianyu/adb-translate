@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: 127.0.0.1/adb-translate
+baseURL: ./adb-translate/
 title: ADB 翻译文档
 theme: book
 
@@ -20,19 +20,19 @@ markup:
 # There are different options to translate files
 # See https://gohugo.io/content-management/multilingual/#translation-by-filename
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-languages:
-  zh:
-    languageName: Chinese
-    contentDir: content.zh
-    weight: 1
-  # en:
-  #   languageName: English
-  #   contentDir: content
-  #   weight: 2
-  # ru:
-  #   languageName: Russian
-  #   contentDir: content.ru
-  #   weight: 3
+# languages:
+#   zh:
+#     languageName: Chinese
+#     contentDir: content.zh
+#     weight: 1
+#   en:
+#     languageName: English
+#     contentDir: content
+#     weight: 2
+#   ru:
+#     languageName: Russian
+#     contentDir: content.ru
+#     weight: 3
 
 menu:
   # before: []
@@ -96,8 +96,8 @@ params:
   # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
-  # BookPortableLinks: true
+  BookPortableLinks: true
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  # BookServiceWorker: true
+  BookServiceWorker: true
