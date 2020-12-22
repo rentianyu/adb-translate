@@ -54,49 +54,6 @@
 ```
 
 ```bash
-  start-activity [-D] [-N] [-W] [-P <FILE>] [--start-profiler <FILE>]
-          [--sampling INTERVAL] [--streaming] [-R COUNT] [-S]
-          [--track-allocation] [--user <USER_ID> | current] <INTENT>
-      Start an Activity.  Options are:
-          
-      -D: enable debugging
-          
-      -N: enable native debugging
-          
-      -W: wait for launch to complete
-          
-      --start-profiler <FILE>: start profiler and send results to <FILE>
-          
-      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
-          between samples (use with --start-profiler)
-          
-      --streaming: stream the profiling output to the specified file
-          (use with --start-profiler)
-          
-      -P <FILE>: like above, but profiling stops when app goes idle
-          
-      --attach-agent <agent>: attach the given agent before binding
-          
-      --attach-agent-bind <agent>: attach the given agent during binding
-          
-      -R: repeat the activity launch <COUNT> times.  Prior to each repeat,
-          the top activity will be finished.
-          
-      -S: force stop the target app before starting the activity
-          
-      --track-allocation: enable tracking of object allocations
-          
-      --user <USER_ID> | current: Specify which user to run as; if not
-          specified then run as the current user.
-          
-      --windowingMode <WINDOWING_MODE>: The windowing mode to launch the activity into.
-          
-      --activityType <ACTIVITY_TYPE>: The activity type to launch the activity as.
-  用法：
-  am help
-```
-
-```bash
   start-service [--user <USER_ID> | current] <INTENT>
       Start a Service.  Options are:
           
