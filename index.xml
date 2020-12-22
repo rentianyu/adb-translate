@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rentianyu.github.io/adb-translate/docs/am/</guid>
-      <description>:/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &amp;lt;FILE&amp;gt;] [--start-profiler &amp;lt;FILE&amp;gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &amp;lt;USER_ID&amp;gt; | current] &amp;lt;INTENT&amp;gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &amp;lt;FILE&amp;gt;: start profiler and send results to &amp;lt;FILE&amp;gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &amp;lt;FILE&amp;gt;: like above, but profiling stops when app goes idle --attach-agent &amp;lt;agent&amp;gt;: attach the given agent before binding --attach-agent-bind &amp;lt;agent&amp;gt;: attach the given agent during binding -R: repeat the activity launch &amp;lt;COUNT&amp;gt; times.</description>
+      <description>am 命令 :/system/bin # am 活动管理命令如下： help 打印这个帮助 用法： am help start-activity [-D] [-N] [-W] [-P &amp;lt;FILE&amp;gt;] [--start-profiler &amp;lt;FILE&amp;gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &amp;lt;USER_ID&amp;gt; | current] &amp;lt;INTENT&amp;gt; 启动一个活动。参数选项如下： -D: enable debugging 开启调试 -N: enable native debugging 开启 native 调试 -W: wait for launch to complete 等待活动启动完全 --start-profiler &amp;lt;FILE&amp;gt;: start profiler and send results to &amp;lt;FILE&amp;gt; 启动性能剖析器并将结果发送至 &amp;lt;FILE&amp;gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) 使用INTERVAL微秒的样本分析 样本之间（与 --start-profiler 一起使用） --streaming: stream the profiling output to the specified file (use with --start-profiler) 将分析的数据流输出 到指定文件 （与 --start-profiler 一起使用） -P &amp;lt;FILE&amp;gt;: like above, but profiling stops when app goes idle 类似于 --start-profiler，但当应用进入空闲状态时剖析停止 --attach-agent &amp;lt;agent&amp;gt;: attach the given agent before binding --attach-agent-bind &amp;lt;agent&amp;gt;: attach the given agent during binding -R: repeat the activity launch &amp;lt;COUNT&amp;gt; times.</description>
     </item>
     
     <item>
@@ -187,6 +187,15 @@
       
       <guid>https://rentianyu.github.io/adb-translate/docs/wm/</guid>
       <description>:/system/bin # wm Window manager (window) commands: help Print this help text. size [reset|WxH|WdpxHdp] Return or override display size. width and height in pixels unless suffixed with &amp;#39;dp&amp;#39;. density [reset|DENSITY] Return or override display density. overscan [reset|LEFT,TOP,RIGHT,BOTTOM] Set overscan area for display. scaling [off|auto] Set display scaling mode. dismiss-keyguard Dismiss the keyguard, prompting user for auth if necessary. </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rentianyu.github.io/adb-translate/docs/%E7%AE%80%E6%98%8E%E5%91%BD%E4%BB%A4%E7%BF%BB%E8%AF%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rentianyu.github.io/adb-translate/docs/%E7%AE%80%E6%98%8E%E5%91%BD%E4%BB%A4%E7%BF%BB%E8%AF%91/</guid>
+      <description>   命令 英文 翻译      am Activity manager 活动管理器    appops AppOps service 软件权限服务    busybox      cmd      dpm      dumpsys      getprop      logcat      pm Package manager 软件包管理器    screencap      screenrecord      service      setenforce      setprop      settings      svc      telecom      toybox      wm                               </description>
     </item>
     
   </channel>

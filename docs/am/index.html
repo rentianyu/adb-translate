@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.68.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=":/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &lt;FILE&gt;: like above, but profiling stops when app goes idle --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times.">
+<meta name="description" content="am 命令 :/system/bin # am 活动管理命令如下： help 打印这个帮助 用法： am help start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; 启动一个活动。参数选项如下： -D: enable debugging 开启调试 -N: enable native debugging 开启 native 调试 -W: wait for launch to complete 等待活动启动完全 --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; 启动性能剖析器并将结果发送至 &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) 使用INTERVAL微秒的样本分析 样本之间（与 --start-profiler 一起使用） --streaming: stream the profiling output to the specified file (use with --start-profiler) 将分析的数据流输出 到指定文件 （与 --start-profiler 一起使用） -P &lt;FILE&gt;: like above, but profiling stops when app goes idle 类似于 --start-profiler，但当应用进入空闲状态时剖析停止 --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content=":/system/bin # am Activity manager (activity) commands: help Print this help text. start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; Start an Activity. Options are: -D: enable debugging -N: enable native debugging -W: wait for launch to complete --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) --streaming: stream the profiling output to the specified file (use with --start-profiler) -P &lt;FILE&gt;: like above, but profiling stops when app goes idle --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times." />
+<meta property="og:description" content="am 命令 :/system/bin # am 活动管理命令如下： help 打印这个帮助 用法： am help start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; 启动一个活动。参数选项如下： -D: enable debugging 开启调试 -N: enable native debugging 开启 native 调试 -W: wait for launch to complete 等待活动启动完全 --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; 启动性能剖析器并将结果发送至 &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) 使用INTERVAL微秒的样本分析 样本之间（与 --start-profiler 一起使用） --streaming: stream the profiling output to the specified file (use with --start-profiler) 将分析的数据流输出 到指定文件 （与 --start-profiler 一起使用） -P &lt;FILE&gt;: like above, but profiling stops when app goes idle 类似于 --start-profiler，但当应用进入空闲状态时剖析停止 --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/am/" />
-<meta property="article:modified_time" content="2020-12-15T19:48:35+08:00" />
+<meta property="article:modified_time" content="2020-12-22T23:09:08+08:00" />
 <title>Am | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/adb-translate/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
-<script defer src="/adb-translate/en.search.min.303869055f8734e47be91c789f36072e1a499d9bbb8a75cdee4a1ff2e31beae0.js" integrity="sha256-MDhpBV&#43;HNOR76Rx4nzYHLhpJnZu7inXN7kof8uMb6uA="></script>
+<script defer src="/adb-translate/en.search.min.11857c0dce381e457b896331f3dc5f9fa77ef8c0ebd6e4f13d64bfdc961471dd.js" integrity="sha256-EYV8Dc44HkV7iWMx89xfn6d&#43;&#43;MDr1uTxPWS/3JYUcd0="></script>
 
 <script defer src="/adb-translate/sw.min.c847bdf3c14d054e3f4cead28bd290c6d0d87470062dce10e0f607681f67b1cd.js" integrity="sha256-yEe988FNBU4/TOrSi9KQxtDYdHAGLc4Q4PYHaB9nsc0="></script>
 <!--
@@ -322,6 +322,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://rentianyu.github.io/adb-translate/docs/%E7%AE%80%E6%98%8E%E5%91%BD%E4%BB%A4%E7%BF%BB%E8%AF%91/" class="">简明命令翻译</a>
+  
+
+        </li>
+      
+    
   </ul>
 
 
@@ -388,7 +401,11 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#am-命令">am 命令</a></li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -398,49 +415,112 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># am</span>
-Activity manager <span style="color:#f92672">(</span>activity<span style="color:#f92672">)</span> commands:
-  help
-      Print this help text.
-  start-activity <span style="color:#f92672">[</span>-D<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-W<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--start-profiler &lt;FILE&gt;<span style="color:#f92672">]</span>
+  <article class="markdown"><h1 id="am-命令">am 命令</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># am</span>
+活动管理命令如下：
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  help
+      打印这个帮助
+  用法：
+  am help
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  start-activity <span style="color:#f92672">[</span>-D<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-W<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--start-profiler &lt;FILE&gt;<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--sampling INTERVAL<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--streaming<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-R COUNT<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-S<span style="color:#f92672">]</span>
+          <span style="color:#f92672">[</span>--track-allocation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+      启动一个活动。参数选项如下：  
+      -D: enable debugging
+          开启调试
+      -N: enable native debugging
+          开启 native 调试
+      -W: wait <span style="color:#66d9ef">for</span> launch to complete
+          等待活动启动完全
+      --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt;
+          启动性能剖析器并将结果发送至 &lt;FILE&gt;
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+          使用INTERVAL微秒的样本分析
+          样本之间（与 --start-profiler 一起使用）
+      --streaming: stream the profiling output to the specified file
+          <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+          将分析的数据流输出 到指定文件
+          （与 --start-profiler 一起使用）
+      -P &lt;FILE&gt;: like above, but profiling stops when app goes idle
+          类似于 --start-profiler，但当应用进入空闲状态时剖析停止
+      --attach-agent &lt;agent&gt;: attach the given agent before binding
+          
+      --attach-agent-bind &lt;agent&gt;: attach the given agent during binding
+          
+      -R: repeat the activity launch &lt;COUNT&gt; times.  Prior to each repeat, the top activity will be finished.
+          重复启动 Activity count 次。在每次重复前，将完成顶层 Activity
+      -S: force stop the target app before starting the activity
+          在启动 Activity 前，强行停止目标应用
+      --track-allocation: enable tracking of object allocations
+          
+      --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not specified <span style="color:#66d9ef">then</span> run as the current user.
+          指定要作为哪个用户运行；如果未指定，则作为当前用户运行
+      --windowingMode &lt;WINDOWING_MODE&gt;: The windowing mode to launch the activity into.
+          将活动启动到指定窗口模式
+      --activityType &lt;ACTIVITY_TYPE&gt;: The activity type to launch the activity as.
+          
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  start-activity <span style="color:#f92672">[</span>-D<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-W<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--start-profiler &lt;FILE&gt;<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--sampling INTERVAL<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--streaming<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-R COUNT<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-S<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--track-allocation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Start an Activity.  Options are:
+          
       -D: enable debugging
+          
       -N: enable native debugging
+          
       -W: wait <span style="color:#66d9ef">for</span> launch to complete
+          
       --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt;
+          
       --sampling INTERVAL: use sample profiling with INTERVAL microseconds
           between samples <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+          
       --streaming: stream the profiling output to the specified file
           <span style="color:#f92672">(</span>use with --start-profiler<span style="color:#f92672">)</span>
+          
       -P &lt;FILE&gt;: like above, but profiling stops when app goes idle
+          
       --attach-agent &lt;agent&gt;: attach the given agent before binding
+          
       --attach-agent-bind &lt;agent&gt;: attach the given agent during binding
+          
       -R: repeat the activity launch &lt;COUNT&gt; times.  Prior to each repeat,
           the top activity will be finished.
+          
       -S: force stop the target app before starting the activity
+          
       --track-allocation: enable tracking of object allocations
+          
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
+          
       --windowingMode &lt;WINDOWING_MODE&gt;: The windowing mode to launch the activity into.
+          
       --activityType &lt;ACTIVITY_TYPE&gt;: The activity type to launch the activity as.
-  start-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
+  用法：
+  am help
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  start-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Start a Service.  Options are:
+          
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
   start-foreground-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Start a foreground Service.  Options are:
+          
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
   stop-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Stop a Service.  Options are:
+          
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
   broadcast <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Send a broadcast Intent.  Options are:
+          
       --user &lt;USER_ID&gt; | all | current: Specify which user to send to; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> send to all users.
+          
       --receiver-permission &lt;PERMISSION&gt;: Require receiver to hold permission.
   instrument <span style="color:#f92672">[</span>-r<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-e &lt;NAME&gt; &lt;VALUE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-p &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-w<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--no-hidden-api-checks<span style="color:#f92672">]</span>
@@ -448,47 +528,66 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
       Start an Instrumentation.  Typically this target &lt;COMPONENT&gt; is in the
       form &lt;TEST_PACKAGE&gt;/&lt;RUNNER_CLASS&gt; or only &lt;TEST_PACKAGE&gt; <span style="color:#66d9ef">if</span> there
       is only one instrumentation.  Options are:
+          
       -r: print raw results <span style="color:#f92672">(</span>otherwise decode REPORT_KEY_STREAMRESULT<span style="color:#f92672">)</span>.  Use with
           <span style="color:#f92672">[</span>-e perf true<span style="color:#f92672">]</span> to generate raw output <span style="color:#66d9ef">for</span> performance measurements.
+          
       -e &lt;NAME&gt; &lt;VALUE&gt;: set argument &lt;NAME&gt; to &lt;VALUE&gt;.  For test runners a
           common form is <span style="color:#f92672">[</span>-e &lt;testrunner_flag&gt; &lt;value&gt;<span style="color:#f92672">[</span>,&lt;value&gt;...<span style="color:#f92672">]]</span>.
+          
       -p &lt;FILE&gt;: write profiling data to &lt;FILE&gt;
+          
       -m: Write output as protobuf to stdout <span style="color:#f92672">(</span>machine readable<span style="color:#f92672">)</span>
+          
       -f &lt;Optional PATH/TO/FILE&gt;: Write output as protobuf to a file <span style="color:#f92672">(</span>machine
           readable<span style="color:#f92672">)</span>. If path is not specified, default directory and file name will
           be used: /sdcard/instrument-logs/log-yyyyMMdd-hhmmss-SSS.instrumentation_data_proto
+          
       -w: wait <span style="color:#66d9ef">for</span> instrumentation to finish before returning.  Required <span style="color:#66d9ef">for</span>
           test runners.
+          
       --user &lt;USER_ID&gt; | current: Specify user instrumentation runs in;
           current user <span style="color:#66d9ef">if</span> not specified.
+          
       --no-hidden-api-checks: disable restrictions on use of hidden API.
+          
       --no-window-animation: turn off window animations <span style="color:#66d9ef">while</span> running.
+          
       --abi &lt;ABI&gt;: Launch the instrumented process with the selected ABI.
           This assumes that the process supports the selected ABI.
   trace-ipc <span style="color:#f92672">[</span>start|stop<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--dump-file &lt;FILE&gt;<span style="color:#f92672">]</span>
       Trace IPC transactions.
       start: start tracing IPC transactions.
       stop: stop tracing IPC transactions and dump the results to file.
+          
       --dump-file &lt;FILE&gt;: Specify the file the trace should be dumped to.
   profile <span style="color:#f92672">[</span>start|stop<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--sampling INTERVAL<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--streaming<span style="color:#f92672">]</span> &lt;PROCESS&gt; &lt;FILE&gt;
       Start and stop profiler on a process.  The given &lt;PROCESS&gt; argument
         may be either a process name or pid.  Options are:
+          
       --user &lt;USER_ID&gt; | current: When supplying a process name,
           specify user of process to profile; uses current user <span style="color:#66d9ef">if</span> not specified.
+          
       --sampling INTERVAL: use sample profiling with INTERVAL microseconds
           between samples
+          
       --streaming: stream the profiling output to the specified file
   dumpheap <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-n<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-g<span style="color:#f92672">]</span> &lt;PROCESS&gt; &lt;FILE&gt;
       Dump the heap of a process.  The given &lt;PROCESS&gt; argument may
         be either a process name or pid.  Options are:
+          
       -n: dump native heap instead of managed heap
+          
       -g: force GC before dumping the heap
+          
       --user &lt;USER_ID&gt; | current: When supplying a process name,
           specify user of process to dump; uses current user <span style="color:#66d9ef">if</span> not specified.
   set-debug-app <span style="color:#f92672">[</span>-w<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--persistent<span style="color:#f92672">]</span> &lt;PACKAGE&gt;
       Set application &lt;PACKAGE&gt; to debug.  Options are:
+          
       -w: wait <span style="color:#66d9ef">for</span> debugger when application starts
+          
       --persistent: retain this value
   clear-debug-app
       Clear the previously set-debug-app.
@@ -515,12 +614,15 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
 </span><span style="color:#e6db74">      become idle (not allowing background services), do that now.
 </span><span style="color:#e6db74">  monitor [--gdb &lt;port&gt;]
 </span><span style="color:#e6db74">      Start monitoring for crashes or ANRs.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --gdb: start gdbserv on the given port at crash/ANR
 </span><span style="color:#e6db74">  watch-uids [--oom &lt;uid&gt;]
 </span><span style="color:#e6db74">      Start watching for and reporting uid state changes.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --oom: specify a uid for which to report detailed change messages.
 </span><span style="color:#e6db74">  hang [--allow-restart]
 </span><span style="color:#e6db74">      Hang the system.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --allow-restart: allow watchdog to perform normal system restart
 </span><span style="color:#e6db74">  restart
 </span><span style="color:#e6db74">      Restart the user-space system.
@@ -549,7 +651,9 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
 </span><span style="color:#e6db74">  stop-user [-w] [-f] &lt;USER_ID&gt;
 </span><span style="color:#e6db74">      Stop execution of USER_ID, not allowing it to run any
 </span><span style="color:#e6db74">      code until a later explicit start or switch to it.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      -w: wait for stop-user to complete.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      -f: force stop even if there are related users that cannot be stopped.
 </span><span style="color:#e6db74">  is-user-stopped &lt;USER_ID&gt;
 </span><span style="color:#e6db74">      Returns whether &lt;USER_ID&gt; has been stopped or not.
@@ -565,8 +669,11 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
 </span><span style="color:#e6db74">    Attach an agent to the specified &lt;PROCESS&gt;, which may be either a process name or a PID.
 </span><span style="color:#e6db74">  get-config [--days N] [--device] [--proto]
 </span><span style="color:#e6db74">      Retrieve the configuration and any recent configurations of the device.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --days: also return last N days of configurations that have been seen.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --device: also output global device configuration info.
+</span><span style="color:#e6db74">          
 </span><span style="color:#e6db74">      --proto: return result as a proto; does not include --days info.
 </span><span style="color:#e6db74">  supports-multiwindow
 </span><span style="color:#e6db74">      Returns true if the device supports multiwindow.
@@ -634,7 +741,6 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
       without restarting any processes.
   write
       Write all pending state to storage.
-
 &lt;INTENT&gt; specifications include these flags and arguments:
     <span style="color:#f92672">[</span>-a &lt;ACTION&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-d &lt;DATA_URI&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-t &lt;MIME_TYPE&gt;<span style="color:#f92672">]</span>
     <span style="color:#f92672">[</span>-c &lt;CATEGORY&gt; <span style="color:#f92672">[</span>-c &lt;CATEGORY&gt;<span style="color:#f92672">]</span> ...<span style="color:#f92672">]</span>
@@ -683,7 +789,7 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
     <span style="color:#f92672">[</span>--receiver-include-background<span style="color:#f92672">]</span>
     <span style="color:#f92672">[</span>--selector<span style="color:#f92672">]</span>
     <span style="color:#f92672">[</span>&lt;URI&gt; | &lt;PACKAGE&gt; | &lt;COMPONENT&gt;<span style="color:#f92672">]</span>
-</code></pre></div></article>
+</code></pre></div><pre><code></code></pre></article>
  
       
 
@@ -693,9 +799,9 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/3821eed48164510deabb9b98a35210b8a2574a05" title='Last modified by 小贝塔 | December 15, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/0c0248150395c7324aa56d44bc2502f37e2b68ea" title='Last modified by rentianyu | December 22, 2020' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 15, 2020</span>
+      <span>December 22, 2020</span>
     </a>
   </div>
 
@@ -728,7 +834,11 @@ Activity manager <span style="color:#f92672">(</span>activity<span style="color:
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#am-命令">am 命令</a></li>
+  </ul>
+</nav>
 
  
     </aside>
