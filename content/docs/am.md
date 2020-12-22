@@ -1,47 +1,123 @@
+# am 命令
+
 ```bash
 :/system/bin # am
-Activity manager (activity) commands:
+活动管理命令如下：
+```
+
+```bash
   help
-      Print this help text.
+      打印这个帮助
+  用法：
+  am help
+```
+
+```bash
+  start-activity [-D] [-N] [-W] [-P <FILE>] [--start-profiler <FILE>]
+          [--sampling INTERVAL] [--streaming] [-R COUNT] [-S]
+          [--track-allocation] [--user <USER_ID> | current] <INTENT>
+      启动一个活动。参数选项如下：  
+      -D: enable debugging
+          开启调试
+      -N: enable native debugging
+          开启 native 调试
+      -W: wait for launch to complete
+          等待活动启动完全
+      --start-profiler <FILE>: start profiler and send results to <FILE>
+          启动性能剖析器并将结果发送至 <FILE>
+      --sampling INTERVAL: use sample profiling with INTERVAL microseconds
+          between samples (use with --start-profiler)
+          使用INTERVAL微秒的样本分析
+          样本之间（与 --start-profiler 一起使用）
+      --streaming: stream the profiling output to the specified file
+          (use with --start-profiler)
+          将分析的数据流输出 到指定文件
+          （与 --start-profiler 一起使用）
+      -P <FILE>: like above, but profiling stops when app goes idle
+          类似于 --start-profiler，但当应用进入空闲状态时剖析停止
+      --attach-agent <agent>: attach the given agent before binding
+          
+      --attach-agent-bind <agent>: attach the given agent during binding
+          
+      -R: repeat the activity launch <COUNT> times.  Prior to each repeat, the top activity will be finished.
+          重复启动 Activity count 次。在每次重复前，将完成顶层 Activity
+      -S: force stop the target app before starting the activity
+          在启动 Activity 前，强行停止目标应用
+      --track-allocation: enable tracking of object allocations
+          
+      --user <USER_ID> | current: Specify which user to run as; if not specified then run as the current user.
+          指定要作为哪个用户运行；如果未指定，则作为当前用户运行
+      --windowingMode <WINDOWING_MODE>: The windowing mode to launch the activity into.
+          将活动启动到指定窗口模式
+      --activityType <ACTIVITY_TYPE>: The activity type to launch the activity as.
+          
+```
+
+```bash
   start-activity [-D] [-N] [-W] [-P <FILE>] [--start-profiler <FILE>]
           [--sampling INTERVAL] [--streaming] [-R COUNT] [-S]
           [--track-allocation] [--user <USER_ID> | current] <INTENT>
       Start an Activity.  Options are:
+          
       -D: enable debugging
+          
       -N: enable native debugging
+          
       -W: wait for launch to complete
+          
       --start-profiler <FILE>: start profiler and send results to <FILE>
+          
       --sampling INTERVAL: use sample profiling with INTERVAL microseconds
           between samples (use with --start-profiler)
+          
       --streaming: stream the profiling output to the specified file
           (use with --start-profiler)
+          
       -P <FILE>: like above, but profiling stops when app goes idle
+          
       --attach-agent <agent>: attach the given agent before binding
+          
       --attach-agent-bind <agent>: attach the given agent during binding
+          
       -R: repeat the activity launch <COUNT> times.  Prior to each repeat,
           the top activity will be finished.
+          
       -S: force stop the target app before starting the activity
+          
       --track-allocation: enable tracking of object allocations
+          
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
+          
       --windowingMode <WINDOWING_MODE>: The windowing mode to launch the activity into.
+          
       --activityType <ACTIVITY_TYPE>: The activity type to launch the activity as.
+  用法：
+  am help
+```
+
+```bash
   start-service [--user <USER_ID> | current] <INTENT>
       Start a Service.  Options are:
+          
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
   start-foreground-service [--user <USER_ID> | current] <INTENT>
       Start a foreground Service.  Options are:
+          
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
   stop-service [--user <USER_ID> | current] <INTENT>
       Stop a Service.  Options are:
+          
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
   broadcast [--user <USER_ID> | all | current] <INTENT>
       Send a broadcast Intent.  Options are:
+          
       --user <USER_ID> | all | current: Specify which user to send to; if not
           specified then send to all users.
+          
       --receiver-permission <PERMISSION>: Require receiver to hold permission.
   instrument [-r] [-e <NAME> <VALUE>] [-p <FILE>] [-w]
           [--user <USER_ID> | current] [--no-hidden-api-checks]
@@ -49,47 +125,66 @@ Activity manager (activity) commands:
       Start an Instrumentation.  Typically this target <COMPONENT> is in the
       form <TEST_PACKAGE>/<RUNNER_CLASS> or only <TEST_PACKAGE> if there
       is only one instrumentation.  Options are:
+          
       -r: print raw results (otherwise decode REPORT_KEY_STREAMRESULT).  Use with
           [-e perf true] to generate raw output for performance measurements.
+          
       -e <NAME> <VALUE>: set argument <NAME> to <VALUE>.  For test runners a
           common form is [-e <testrunner_flag> <value>[,<value>...]].
+          
       -p <FILE>: write profiling data to <FILE>
+          
       -m: Write output as protobuf to stdout (machine readable)
+          
       -f <Optional PATH/TO/FILE>: Write output as protobuf to a file (machine
           readable). If path is not specified, default directory and file name will
           be used: /sdcard/instrument-logs/log-yyyyMMdd-hhmmss-SSS.instrumentation_data_proto
+          
       -w: wait for instrumentation to finish before returning.  Required for
           test runners.
+          
       --user <USER_ID> | current: Specify user instrumentation runs in;
           current user if not specified.
+          
       --no-hidden-api-checks: disable restrictions on use of hidden API.
+          
       --no-window-animation: turn off window animations while running.
+          
       --abi <ABI>: Launch the instrumented process with the selected ABI.
           This assumes that the process supports the selected ABI.
   trace-ipc [start|stop] [--dump-file <FILE>]
       Trace IPC transactions.
       start: start tracing IPC transactions.
       stop: stop tracing IPC transactions and dump the results to file.
+          
       --dump-file <FILE>: Specify the file the trace should be dumped to.
   profile [start|stop] [--user <USER_ID> current] [--sampling INTERVAL]
           [--streaming] <PROCESS> <FILE>
       Start and stop profiler on a process.  The given <PROCESS> argument
         may be either a process name or pid.  Options are:
+          
       --user <USER_ID> | current: When supplying a process name,
           specify user of process to profile; uses current user if not specified.
+          
       --sampling INTERVAL: use sample profiling with INTERVAL microseconds
           between samples
+          
       --streaming: stream the profiling output to the specified file
   dumpheap [--user <USER_ID> current] [-n] [-g] <PROCESS> <FILE>
       Dump the heap of a process.  The given <PROCESS> argument may
         be either a process name or pid.  Options are:
+          
       -n: dump native heap instead of managed heap
+          
       -g: force GC before dumping the heap
+          
       --user <USER_ID> | current: When supplying a process name,
           specify user of process to dump; uses current user if not specified.
   set-debug-app [-w] [--persistent] <PACKAGE>
       Set application <PACKAGE> to debug.  Options are:
+          
       -w: wait for debugger when application starts
+          
       --persistent: retain this value
   clear-debug-app
       Clear the previously set-debug-app.
@@ -116,12 +211,15 @@ Activity manager (activity) commands:
       become idle (not allowing background services), do that now.
   monitor [--gdb <port>]
       Start monitoring for crashes or ANRs.
+          
       --gdb: start gdbserv on the given port at crash/ANR
   watch-uids [--oom <uid>]
       Start watching for and reporting uid state changes.
+          
       --oom: specify a uid for which to report detailed change messages.
   hang [--allow-restart]
       Hang the system.
+          
       --allow-restart: allow watchdog to perform normal system restart
   restart
       Restart the user-space system.
@@ -150,7 +248,9 @@ Activity manager (activity) commands:
   stop-user [-w] [-f] <USER_ID>
       Stop execution of USER_ID, not allowing it to run any
       code until a later explicit start or switch to it.
+          
       -w: wait for stop-user to complete.
+          
       -f: force stop even if there are related users that cannot be stopped.
   is-user-stopped <USER_ID>
       Returns whether <USER_ID> has been stopped or not.
@@ -166,8 +266,11 @@ Activity manager (activity) commands:
     Attach an agent to the specified <PROCESS>, which may be either a process name or a PID.
   get-config [--days N] [--device] [--proto]
       Retrieve the configuration and any recent configurations of the device.
+          
       --days: also return last N days of configurations that have been seen.
+          
       --device: also output global device configuration info.
+          
       --proto: return result as a proto; does not include --days info.
   supports-multiwindow
       Returns true if the device supports multiwindow.
@@ -235,7 +338,6 @@ Activity manager (activity) commands:
       without restarting any processes.
   write
       Write all pending state to storage.
-
 <INTENT> specifications include these flags and arguments:
     [-a <ACTION>] [-d <DATA_URI>] [-t <MIME_TYPE>]
     [-c <CATEGORY> [-c <CATEGORY>] ...]
@@ -285,4 +387,4 @@ Activity manager (activity) commands:
     [--selector]
     [<URI> | <PACKAGE> | <COMPONENT>]
 ```
-
+```
