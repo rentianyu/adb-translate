@@ -50,32 +50,37 @@
       --windowingMode <WINDOWING_MODE>: The windowing mode to launch the activity into.
           将活动启动到指定窗口模式
       --activityType <ACTIVITY_TYPE>: The activity type to launch the activity as.
-          
+	 启动活动的活动类型          
 ```
 
 ```bash
   start-service [--user <USER_ID> | current] <INTENT>
       Start a Service.  Options are:
-          
+         启动服务-开启一个服务，参数如下： 
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
+	  指定启动服务的用户/用户ID,如果没有指定就以当前用户启动服务
   start-foreground-service [--user <USER_ID> | current] <INTENT>
       Start a foreground Service.  Options are:
-          
+         启动前台服务，参数如下： 
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
+	  指定启动前台服务的用户/用户ID,如果没有指定就以当前用户启动前台服务
+
   stop-service [--user <USER_ID> | current] <INTENT>
       Stop a Service.  Options are:
-          
+         停止服务，参数如下： 
       --user <USER_ID> | current: Specify which user to run as; if not
           specified then run as the current user.
+	   指定停止服务的用户/用户ID,如果没有指定就以当前用户停止服务
   broadcast [--user <USER_ID> | all | current] <INTENT>
       Send a broadcast Intent.  Options are:
-          
+         广播，发送一个广播意图，参数如下： 
       --user <USER_ID> | all | current: Specify which user to send to; if not
           specified then send to all users.
-          
+         指定给某一个用户，若没有指定则发送给所有用户 
       --receiver-permission <PERMISSION>: Require receiver to hold permission.
+     接收者许可，要求接收者认证许可。类似蓝牙连接时的认证 
   instrument [-r] [-e <NAME> <VALUE>] [-p <FILE>] [-w]
           [--user <USER_ID> | current] [--no-hidden-api-checks]
           [--no-window-animation] [--abi <ABI>] <COMPONENT>
