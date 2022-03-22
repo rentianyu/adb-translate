@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.68.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.">
+<meta name="description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; screenrecord 参数 文件名 Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file.&#39; 安卓屏幕记录，记录设备屏幕内容保存为mp4文件 Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main&#39; display resolution if supported 1280x720 if not. For best results, use a size supported by the AVC encoder. 设置记录尺寸 --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e." />
+<meta property="og:description" content=":/system/bin # screenrecord --help Usage: screenrecord [options] &lt;filename&gt; screenrecord 参数 文件名 Android screenrecord v1.2. Records the device&#39;s display to a .mp4 file.&#39; 安卓屏幕记录，记录设备屏幕内容保存为mp4文件 Options: --size WIDTHxHEIGHT Set the video size, e.g. &#34;1280x720&#34;. Default is the device&#39;s main&#39; display resolution if supported 1280x720 if not. For best results, use a size supported by the AVC encoder. 设置记录尺寸 --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/screenrecord/" />
-<meta property="article:modified_time" content="2020-12-23T00:46:51+08:00" />
+<meta property="article:modified_time" content="2022-03-23T00:28:48+08:00" />
 <title>Screenrecord | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/adb-translate/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
-<script defer src="/adb-translate/en.search.min.550f6b473574a228958995da1a7cfcc9fc0e0241f4bbadeebdb3643ebd622d5c.js" integrity="sha256-VQ9rRzV0oiiViZXaGnz8yfwOAkH0u63uvbNkPr1iLVw="></script>
+<script defer src="/adb-translate/en.search.min.d01c051b2f83a6547b9df51f0311cdfdfb99012a7f2ef4ce3dc49894d5b4645b.js" integrity="sha256-0BwFGy&#43;DplR7nfUfAxHN/fuZASp/LvTOPcSYlNW0ZFs="></script>
 
 <script defer src="/adb-translate/sw.min.c847bdf3c14d054e3f4cead28bd290c6d0d87470062dce10e0f607681f67b1cd.js" integrity="sha256-yEe988FNBU4/TOrSi9KQxtDYdHAGLc4Q4PYHaB9nsc0="></script>
 <!--
@@ -413,28 +413,34 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># screenrecord --help</span>
 Usage: screenrecord <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;filename&gt;
-
-Android screenrecord v1.2.  Records the device<span style="color:#e6db74">&#39;s display to a .mp4 file.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">Options:
-</span><span style="color:#e6db74">--size WIDTHxHEIGHT
-</span><span style="color:#e6db74">    Set the video size, e.g. &#34;1280x720&#34;.  Default is the device&#39;</span>s main
-    display resolution <span style="color:#f92672">(</span><span style="color:#66d9ef">if</span> supported<span style="color:#f92672">)</span>, 1280x720 <span style="color:#66d9ef">if</span> not.  For best results,
+screenrecord 参数 文件名
+Android screenrecord v1.2.  Records the device<span style="color:#e6db74">&#39;s display to a .mp4 file.&#39;</span>
+安卓屏幕记录，记录设备屏幕内容保存为mp4文件
+Options:
+--size WIDTHxHEIGHT
+    Set the video size, e.g. <span style="color:#e6db74">&#34;1280x720&#34;</span>.  Default is the device<span style="color:#e6db74">&#39;s main&#39;</span>
+    display resolution <span style="color:#66d9ef">if</span> supported 1280x720 <span style="color:#66d9ef">if</span> not.  For best results,
     use a size supported by the AVC encoder.
+   设置记录尺寸 
 --bit-rate RATE
     Set the video bit rate, in bits per second.  Value may be specified as
     bits or megabits, e.g. <span style="color:#e6db74">&#39;4000000&#39;</span> is equivalent to <span style="color:#e6db74">&#39;4M&#39;</span>.  Default 20Mbps.
+    设置视频比特率，美妙的bits，默认20M
 --bugreport
     Add additional information, such as a timestamp overlay, that is helpful
     in videos captured to illustrate bugs.
+   增加额外的信息，例如覆盖一个时间戳，这对捕获bug有帮助。 
 --time-limit TIME
     Set the maximum recording time, in seconds.  Default / maximum is 180.
+    设置最大的每秒记录，默认180
 --verbose
     Display interesting information on stdout.
+    在标准输出中显示感兴趣的信息
 --help
     Show this message.
-
+    现实帮助信息
 Recording continues <span style="color:#66d9ef">until</span> Ctrl-C is hit or the time limit is reached.
+Ctrl-C停止记录或设置的记录时间到。
 </code></pre></div></article>
  
       
@@ -445,9 +451,9 @@ Recording continues <span style="color:#66d9ef">until</span> Ctrl-C is hit or th
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/c989c82555e78199324eadbff9f3bf48492bbad5" title='Last modified by rentianyu | December 22, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/3e11c62b20a8d94ca26392797b656551fa8133d6" title='Last modified by 小贝塔 | March 22, 2022' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 22, 2020</span>
+      <span>March 22, 2022</span>
     </a>
   </div>
 

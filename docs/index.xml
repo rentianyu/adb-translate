@@ -87,7 +87,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rentianyu.github.io/adb-translate/docs/logcat/</guid>
-      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; -f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
+      <description>:/system/bin # logcat --help Usage: logcat [options] [filterspecs] 查看系统日志 options include: -s Set default filter to silent. Equivalent to filterspec &amp;#39;*:S&amp;#39; 默认日志输出无筛选,相当于筛选说明&amp;#39;*:S&amp;#39;	-f &amp;lt;file&amp;gt;, --file=&amp;lt;file&amp;gt; Log to file. Default is stdout 将日志写入文件，默认为标准命令行输出 -r &amp;lt;kbytes&amp;gt;, --rotate-kbytes=&amp;lt;kbytes&amp;gt; Rotate log every kbytes. Requires -f option 每xKB循环一次日志，需要配合-f操作 -n &amp;lt;count&amp;gt;, --rotate-count=&amp;lt;count&amp;gt; Sets max number of rotated logs to &amp;lt;count&amp;gt;, default 4 设置循环日志的最大次数，默认为4 --id=&amp;lt;id&amp;gt; If the signature id for logging to file changes, then clear the fileset and continue 如果记录到文件的日志标识id改变，就会清除文件集然后继续 -v &amp;lt;format&amp;gt;, --format=&amp;lt;format&amp;gt; Sets log print format verb and adverbs, where &amp;lt;format&amp;gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.</description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rentianyu.github.io/adb-translate/docs/screencap/</guid>
-      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] -h: this message -p: save the file as a png. -d: specify the display id to capture, default 0. If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. </description>
+      <description>:/system/bin # screencap -h usage: screencap [-hp] [-d display-id] [FILENAME] 屏幕截图 -h: this message 帮助信息 -p: save the file as a png. 保存截图为png -d: specify the display id to capture, default 0. 指定捕获的展示id，默认0 If FILENAME ends with .png it will be saved as a png. If FILENAME is not given, the results will be printed to stdout. 如果文件名称以png结尾，文件将被保存为png，如果文件名为给出，结果会以标准输出打印。 </description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rentianyu.github.io/adb-translate/docs/screenrecord/</guid>
-      <description>:/system/bin # screenrecord --help Usage: screenrecord [options] &amp;lt;filename&amp;gt; Android screenrecord v1.2. Records the device&amp;#39;s display to a .mp4 file. Options: --size WIDTHxHEIGHT Set the video size, e.g. &amp;#34;1280x720&amp;#34;. Default is the device&amp;#39;s main display resolution (if supported), 1280x720 if not. For best results, use a size supported by the AVC encoder. --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.</description>
+      <description>:/system/bin # screenrecord --help Usage: screenrecord [options] &amp;lt;filename&amp;gt; screenrecord 参数 文件名 Android screenrecord v1.2. Records the device&amp;#39;s display to a .mp4 file.&amp;#39; 安卓屏幕记录，记录设备屏幕内容保存为mp4文件 Options: --size WIDTHxHEIGHT Set the video size, e.g. &amp;#34;1280x720&amp;#34;. Default is the device&amp;#39;s main&amp;#39; display resolution if supported 1280x720 if not. For best results, use a size supported by the AVC encoder. 设置记录尺寸 --bit-rate RATE Set the video bit rate, in bits per second. Value may be specified as bits or megabits, e.</description>
     </item>
     
     <item>
@@ -195,7 +195,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rentianyu.github.io/adb-translate/docs/%E7%AE%80%E6%98%8E%E5%91%BD%E4%BB%A4%E7%BF%BB%E8%AF%91/</guid>
-      <description>   命令 英文 翻译      am Activity manager 活动管理器    appops AppOps service 软件权限服务    busybox      cmd      dpm      dumpsys      getprop      logcat      pm Package manager 软件包管理器    screencap      screenrecord      service      setenforce      setprop      settings      svc      telecom      toybox      wm                               </description>
+      <description>命令 英文 翻译      am Activity manager 活动管理器    appops AppOps service 软件权限服务    busybox      cmd      dpm      dumpsys      getprop      logcat logcat 日志记录    pm Package manager 软件包管理器    screencap screencapture 屏幕截图    screenrecord screenrecord 屏幕录像    service      setenforce      setprop      settings      svc      telecom      toybox      wm     +++表示待添加内容,未翻译     ?</description>
     </item>
     
   </channel>

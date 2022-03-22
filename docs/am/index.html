@@ -10,12 +10,12 @@
 <meta property="og:description" content="am 命令 :/system/bin # am 活动管理命令如下： help 打印这个帮助 用法： am help start-activity [-D] [-N] [-W] [-P &lt;FILE&gt;] [--start-profiler &lt;FILE&gt;] [--sampling INTERVAL] [--streaming] [-R COUNT] [-S] [--track-allocation] [--user &lt;USER_ID&gt; | current] &lt;INTENT&gt; 启动一个活动。参数选项如下： -D: enable debugging 开启调试 -N: enable native debugging 开启 native 调试 -W: wait for launch to complete 等待活动启动完全 --start-profiler &lt;FILE&gt;: start profiler and send results to &lt;FILE&gt; 启动性能剖析器并将结果发送至 &lt;FILE&gt; --sampling INTERVAL: use sample profiling with INTERVAL microseconds between samples (use with --start-profiler) 使用INTERVAL微秒的样本分析 样本之间（与 --start-profiler 一起使用） --streaming: stream the profiling output to the specified file (use with --start-profiler) 将分析的数据流输出 到指定文件 （与 --start-profiler 一起使用） -P &lt;FILE&gt;: like above, but profiling stops when app goes idle 类似于 --start-profiler，但当应用进入空闲状态时剖析停止 --attach-agent &lt;agent&gt;: attach the given agent before binding --attach-agent-bind &lt;agent&gt;: attach the given agent during binding -R: repeat the activity launch &lt;COUNT&gt; times." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/am/" />
-<meta property="article:modified_time" content="2020-12-23T00:46:51+08:00" />
+<meta property="article:modified_time" content="2022-03-23T00:28:48+08:00" />
 <title>Am | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/adb-translate/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
-<script defer src="/adb-translate/en.search.min.550f6b473574a228958995da1a7cfcc9fc0e0241f4bbadeebdb3643ebd622d5c.js" integrity="sha256-VQ9rRzV0oiiViZXaGnz8yfwOAkH0u63uvbNkPr1iLVw="></script>
+<script defer src="/adb-translate/en.search.min.d01c051b2f83a6547b9df51f0311cdfdfb99012a7f2ef4ce3dc49894d5b4645b.js" integrity="sha256-0BwFGy&#43;DplR7nfUfAxHN/fuZASp/LvTOPcSYlNW0ZFs="></script>
 
 <script defer src="/adb-translate/sw.min.c847bdf3c14d054e3f4cead28bd290c6d0d87470062dce10e0f607681f67b1cd.js" integrity="sha256-yEe988FNBU4/TOrSi9KQxtDYdHAGLc4Q4PYHaB9nsc0="></script>
 <!--
@@ -459,29 +459,34 @@ https://github.com/alex-shpak/hugo-book
       --windowingMode &lt;WINDOWING_MODE&gt;: The windowing mode to launch the activity into.
           将活动启动到指定窗口模式
       --activityType &lt;ACTIVITY_TYPE&gt;: The activity type to launch the activity as.
-          
+	 启动活动的活动类型          
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  start-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Start a Service.  Options are:
-          
+         启动服务-开启一个服务，参数如下： 
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
+	  指定启动服务的用户/用户ID,如果没有指定就以当前用户启动服务
   start-foreground-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Start a foreground Service.  Options are:
-          
+         启动前台服务，参数如下： 
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
+	  指定启动前台服务的用户/用户ID,如果没有指定就以当前用户启动前台服务
+
   stop-service <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Stop a Service.  Options are:
-          
+         停止服务，参数如下： 
       --user &lt;USER_ID&gt; | current: Specify which user to run as; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> run as the current user.
+	   指定停止服务的用户/用户ID,如果没有指定就以当前用户停止服务
   broadcast <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | all | current<span style="color:#f92672">]</span> &lt;INTENT&gt;
       Send a broadcast Intent.  Options are:
-          
+         广播，发送一个广播意图，参数如下： 
       --user &lt;USER_ID&gt; | all | current: Specify which user to send to; <span style="color:#66d9ef">if</span> not
           specified <span style="color:#66d9ef">then</span> send to all users.
-          
+         指定给某一个用户，若没有指定则发送给所有用户 
       --receiver-permission &lt;PERMISSION&gt;: Require receiver to hold permission.
+     接收者许可，要求接收者认证许可。类似蓝牙连接时的认证 
   instrument <span style="color:#f92672">[</span>-r<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-e &lt;NAME&gt; &lt;VALUE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-p &lt;FILE&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-w<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--user &lt;USER_ID&gt; | current<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--no-hidden-api-checks<span style="color:#f92672">]</span>
           <span style="color:#f92672">[</span>--no-window-animation<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--abi &lt;ABI&gt;<span style="color:#f92672">]</span> &lt;COMPONENT&gt;
@@ -759,9 +764,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/c989c82555e78199324eadbff9f3bf48492bbad5" title='Last modified by rentianyu | December 22, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/3e11c62b20a8d94ca26392797b656551fa8133d6" title='Last modified by 小贝塔 | March 22, 2022' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 22, 2020</span>
+      <span>March 22, 2022</span>
     </a>
   </div>
 

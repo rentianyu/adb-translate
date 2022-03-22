@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.68.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; -f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.">
+<meta name="description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] 查看系统日志 options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; 默认日志输出无筛选,相当于筛选说明&#39;*:S&#39;	-f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout 将日志写入文件，默认为标准命令行输出 -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option 每xKB循环一次日志，需要配合-f操作 -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 设置循环日志的最大次数，默认为4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue 如果记录到文件的日志标识id改变，就会清除文件集然后继续 -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; -f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed." />
+<meta property="og:description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] 查看系统日志 options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; 默认日志输出无筛选,相当于筛选说明&#39;*:S&#39;	-f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout 将日志写入文件，默认为标准命令行输出 -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option 每xKB循环一次日志，需要配合-f操作 -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 设置循环日志的最大次数，默认为4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue 如果记录到文件的日志标识id改变，就会清除文件集然后继续 -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/logcat/" />
-<meta property="article:modified_time" content="2020-12-23T00:46:51+08:00" />
+<meta property="article:modified_time" content="2022-03-23T00:28:48+08:00" />
 <title>Logcat | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/adb-translate/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
-<script defer src="/adb-translate/en.search.min.550f6b473574a228958995da1a7cfcc9fc0e0241f4bbadeebdb3643ebd622d5c.js" integrity="sha256-VQ9rRzV0oiiViZXaGnz8yfwOAkH0u63uvbNkPr1iLVw="></script>
+<script defer src="/adb-translate/en.search.min.d01c051b2f83a6547b9df51f0311cdfdfb99012a7f2ef4ce3dc49894d5b4645b.js" integrity="sha256-0BwFGy&#43;DplR7nfUfAxHN/fuZASp/LvTOPcSYlNW0ZFs="></script>
 
 <script defer src="/adb-translate/sw.min.c847bdf3c14d054e3f4cead28bd290c6d0d87470062dce10e0f607681f67b1cd.js" integrity="sha256-yEe988FNBU4/TOrSi9KQxtDYdHAGLc4Q4PYHaB9nsc0="></script>
 <!--
@@ -413,15 +413,21 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># logcat --help</span>
 Usage: logcat <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>filterspecs<span style="color:#f92672">]</span>
+查看系统日志
 options include:
   -s              Set default filter to silent. Equivalent to filterspec <span style="color:#e6db74">&#39;*:S&#39;</span>
+  		  默认日志输出无筛选,相当于筛选说明<span style="color:#e6db74">&#39;*:S&#39;</span>	
   -f &lt;file&gt;, --file<span style="color:#f92672">=</span>&lt;file&gt;               Log to file. Default is stdout
+  		  将日志写入文件，默认为标准命令行输出
   -r &lt;kbytes&gt;, --rotate-kbytes<span style="color:#f92672">=</span>&lt;kbytes&gt;
                   Rotate log every kbytes. Requires -f option
+		  每xKB循环一次日志，需要配合-f操作
   -n &lt;count&gt;, --rotate-count<span style="color:#f92672">=</span>&lt;count&gt;
                   Sets max number of rotated logs to &lt;count&gt;, default <span style="color:#ae81ff">4</span>
+		 设置循环日志的最大次数，默认为4 
   --id<span style="color:#f92672">=</span>&lt;id&gt;       If the signature id <span style="color:#66d9ef">for</span> logging to file changes, <span style="color:#66d9ef">then</span> clear
                   the fileset and <span style="color:#66d9ef">continue</span>
+		  如果记录到文件的日志标识id改变，就会清除文件集然后继续
   -v &lt;format&gt;, --format<span style="color:#f92672">=</span>&lt;format&gt;
                   Sets log print format verb and adverbs, where &lt;format&gt; is:
                     brief help long process raw tag thread threadtime time
@@ -430,69 +436,93 @@ options include:
                     usec UTC year zone
                   Multiple -v parameters or comma separated list of format and
                   format modifiers are allowed.
+		  设置日志输出格式方便查看：color颜色,可添加具体颜色名称，green、red等；
+		  descriptive描述；epoch标志性事件；monotonic无变化事件；printale表格形式;
+		  uid用户id形式；usec感觉和printable差不多；UTC日期；year年份；zone分区范围
+		  可以组合多个参数用于输出你想要的数据格式
   -D, --dividers  Print dividers between each log buffer
   -c, --clear     Clear <span style="color:#f92672">(</span>flush<span style="color:#f92672">)</span> the entire log and exit
                   <span style="color:#66d9ef">if</span> Log to File specified, clear fileset instead
-  -d              Dump the log and <span style="color:#66d9ef">then</span> exit <span style="color:#f92672">(</span>don<span style="color:#e6db74">&#39;t block)
-</span><span style="color:#e6db74">  -e &lt;expr&gt;, --regex=&lt;expr&gt;
-</span><span style="color:#e6db74">                  Only print lines where the log message matches &lt;expr&gt;
-</span><span style="color:#e6db74">                  where &lt;expr&gt; is a Perl-compatible regular expression
-</span><span style="color:#e6db74">  -m &lt;count&gt;, --max-count=&lt;count&gt;
-</span><span style="color:#e6db74">                  Quit after printing &lt;count&gt; lines. This is meant to be
-</span><span style="color:#e6db74">                  paired with --regex, but will work on its own.
-</span><span style="color:#e6db74">  --print         Paired with --regex and --max-count to let content bypass
-</span><span style="color:#e6db74">                  regex filter but still stop at number of matches.
-</span><span style="color:#e6db74">  -t &lt;count&gt;      Print only the most recent &lt;count&gt; lines (implies -d)
-</span><span style="color:#e6db74">  -t &#39;</span>&lt;time&gt;<span style="color:#e6db74">&#39;     Print most recent lines since specified time (implies -d)
-</span><span style="color:#e6db74">  -T &lt;count&gt;      Print only the most recent &lt;count&gt; lines (does not imply -d)
-</span><span style="color:#e6db74">  -T &#39;</span>&lt;time&gt;<span style="color:#e6db74">&#39;     Print most recent lines since specified time (not imply -d)
-</span><span style="color:#e6db74">                  count is pure numerical, time is &#39;</span>MM-DD hh:mm:ss.mmm...<span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">                  &#39;</span>YYYY-MM-DD hh:mm:ss.mmm...<span style="color:#e6db74">&#39; or &#39;</span>sssss.mmm...<span style="color:#e6db74">&#39; format
-</span><span style="color:#e6db74">  -g, --buffer-size                      Get the size of the ring buffer.
-</span><span style="color:#e6db74">  -G &lt;size&gt;, --buffer-size=&lt;size&gt;
-</span><span style="color:#e6db74">                  Set size of log ring buffer, may suffix with K or M.
-</span><span style="color:#e6db74">  -L, --last      Dump logs from prior to last reboot
-</span><span style="color:#e6db74">  -b &lt;buffer&gt;, --buffer=&lt;buffer&gt;         Request alternate ring buffer, &#39;</span>main<span style="color:#e6db74">&#39;,
-</span><span style="color:#e6db74">                  &#39;</span>system<span style="color:#e6db74">&#39;, &#39;</span>radio<span style="color:#e6db74">&#39;, &#39;</span>events<span style="color:#e6db74">&#39;, &#39;</span>crash<span style="color:#e6db74">&#39;, &#39;</span>default<span style="color:#e6db74">&#39; or &#39;</span>all<span style="color:#e6db74">&#39;.
-</span><span style="color:#e6db74">                  Multiple -b parameters or comma separated list of buffers are
-</span><span style="color:#e6db74">                  allowed. Buffers interleaved. Default -b main,system,crash.
-</span><span style="color:#e6db74">  -B, --binary    Output the log in binary.
-</span><span style="color:#e6db74">  -S, --statistics                       Output statistics.
-</span><span style="color:#e6db74">  -p, --prune     Print prune white and ~black list. Service is specified as
-</span><span style="color:#e6db74">                  UID, UID/PID or /PID. Weighed for quicker pruning if prefix
-</span><span style="color:#e6db74">                  with ~, otherwise weighed for longevity if unadorned. All
-</span><span style="color:#e6db74">                  other pruning activity is oldest first. Special case ~!
-</span><span style="color:#e6db74">                  represents an automatic quicker pruning for the noisiest
-</span><span style="color:#e6db74">                  UID as determined by the current statistics.
-</span><span style="color:#e6db74">  -P &#39;</span>&lt;list&gt; ...<span style="color:#e6db74">&#39;, --prune=&#39;</span>&lt;list&gt; ...<span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">                  Set prune white and ~black list, using same format as
-</span><span style="color:#e6db74">                  listed above. Must be quoted.
-</span><span style="color:#e6db74">  --pid=&lt;pid&gt;     Only prints logs from the given pid.
-</span><span style="color:#e6db74">  --wrap          Sleep for 2 hours or when buffer about to wrap whichever
-</span><span style="color:#e6db74">                  comes first. Improves efficiency of polling by providing
-</span><span style="color:#e6db74">                  an about-to-wrap wakeup.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">filterspecs are a series of
-</span><span style="color:#e6db74">  &lt;tag&gt;[:priority]
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">where &lt;tag&gt; is a log component tag (or * for all) and priority is:
-</span><span style="color:#e6db74">  V    Verbose (default for &lt;tag&gt;)
-</span><span style="color:#e6db74">  D    Debug (default for &#39;</span>*<span style="color:#e6db74">&#39;)
-</span><span style="color:#e6db74">  I    Info
-</span><span style="color:#e6db74">  W    Warn
-</span><span style="color:#e6db74">  E    Error
-</span><span style="color:#e6db74">  F    Fatal
-</span><span style="color:#e6db74">  S    Silent (suppress all output)
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">&#39;</span>*<span style="color:#e6db74">&#39; by itself means &#39;</span>*:D<span style="color:#e6db74">&#39; and &lt;tag&gt; by itself means &lt;tag&gt;:V.
-</span><span style="color:#e6db74">If no &#39;</span>*<span style="color:#e6db74">&#39; filterspec or -s on command line, all filter defaults to &#39;</span>*:V<span style="color:#e6db74">&#39;.
-</span><span style="color:#e6db74">eg: &#39;</span>*:S &lt;tag&gt;<span style="color:#e6db74">&#39; prints only &lt;tag&gt;, &#39;</span>&lt;tag&gt;:S<span style="color:#960050;background-color:#1e0010">&#39;</span> suppresses all &lt;tag&gt; log messages.
+		  清理日志并退出，如果日志是写入规定的文件，那就清理文件集
+  -d              Dump the log and <span style="color:#66d9ef">then</span> exit <span style="color:#f92672">(</span>don<span style="color:#e6db74">&#39;t block&#39;</span><span style="color:#f92672">)</span>
+ 		  扔掉日志退出，不是块。 		
+  -e &lt;expr&gt;, --regex<span style="color:#f92672">=</span>&lt;expr&gt;
+                  Only print lines where the log message matches &lt;expr&gt;
+                  where &lt;expr&gt; is a Perl-compatible regular expression
+		  只打印正则匹配的日志内容
+  -m &lt;count&gt;, --max-count<span style="color:#f92672">=</span>&lt;count&gt;
+                  Quit after printing &lt;count&gt; lines. This is meant to be
+                  paired with --regex, but will work on its own.
+		  打印指定行数并退出,可与正则匹配搭配
+  --print         Paired with --regex and --max-count to let content bypass
+                  regex filter but still stop at number of matches.
+		  正则匹配与最大行数配合，让内容可绕过正则筛选，但仍然可停在匹配的行数 
+  -t &lt;count&gt;      Print only the most recent &lt;count&gt; lines <span style="color:#f92672">(</span>implies -d<span style="color:#f92672">)</span>
+                  只打印最新行，可指定行数。 
+  -t <span style="color:#e6db74">&#39;&lt;time&gt;&#39;</span>     Print most recent lines since specified time <span style="color:#f92672">(</span>implies -d<span style="color:#f92672">)</span>
+    		  从特殊的时间点打印最近的行
+  -T &lt;count&gt;      Print only the most recent &lt;count&gt; lines <span style="color:#f92672">(</span>does not imply -d<span style="color:#f92672">)</span>
+      	          同-t&lt;count&gt;但不会退出logcat
+  -T <span style="color:#e6db74">&#39;&lt;time&gt;&#39;</span>     Print most recent lines since specified time <span style="color:#f92672">(</span>not imply -d<span style="color:#f92672">)</span>
+                  count is pure numerical, time is <span style="color:#e6db74">&#39;MM-DD hh:mm:ss.mmm...&#39;</span>
+                  <span style="color:#e6db74">&#39;YYYY-MM-DD hh:mm:ss.mmm...&#39;</span> or <span style="color:#e6db74">&#39;sssss.mmm...&#39;</span> format
+		  指定日期打印log
+  -g, --buffer-size                      Get the size of the ring buffer.
+  		获取log缓冲区大小
+  -G &lt;size&gt;, --buffer-size<span style="color:#f92672">=</span>&lt;size&gt;
+                  Set size of log ring buffer, may suffix with K or M.
+		  设置设置缓冲区大小，可以K或者M后缀
+  -L, --last      Dump logs from prior to last reboot
+   		  扔掉从上一次重启之前的日志
+  -b &lt;buffer&gt;, --buffer<span style="color:#f92672">=</span>&lt;buffer&gt;         Request alternate ring buffer, <span style="color:#e6db74">&#39;main&#39;</span>,
+                  <span style="color:#e6db74">&#39;system&#39;</span>, <span style="color:#e6db74">&#39;radio&#39;</span>, <span style="color:#e6db74">&#39;events&#39;</span>, <span style="color:#e6db74">&#39;crash&#39;</span>, <span style="color:#e6db74">&#39;default&#39;</span> or <span style="color:#e6db74">&#39;all&#39;</span>.
+                  Multiple -b parameters or comma separated list of buffers are
+                  allowed. Buffers interleaved. Default -b main,system,crash.
+		 请求备用的缓冲区log，可结合其他参数使用。
+  -B, --binary    Output the log in binary.
+  		  以二进制的方式输出log 		
+  -S, --statistics                       Output statistics.
+  		  输出日志的统计数据
+  -p, --prune     Print prune white and ~black list. Service is specified as
+                  UID, UID/PID or /PID. Weighed <span style="color:#66d9ef">for</span> quicker pruning <span style="color:#66d9ef">if</span> prefix
+                  with ~, otherwise weighed <span style="color:#66d9ef">for</span> longevity <span style="color:#66d9ef">if</span> unadorned. All
+                  other pruning activity is oldest first. Special <span style="color:#66d9ef">case</span> ~!
+                  represents an automatic quicker pruning <span style="color:#66d9ef">for</span> the noisiest
+                  UID as determined by the current statistics.
+		  +++
+  -P <span style="color:#e6db74">&#39;&lt;list&gt; ...&#39;</span>, --prune<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;list&gt; ...&#39;</span>
+                  Set prune white and ~black list, using same format as
+                  listed above. Must be quoted.
+		  基本同-p
+  --pid<span style="color:#f92672">=</span>&lt;pid&gt;     Only prints logs from the given pid.
+  		  只打印指定pid的log
+  --wrap          Sleep <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> hours or when buffer about to wrap whichever
+                  comes first. Improves efficiency of polling by providing
+                  an about-to-wrap wakeup.
+		 +++ 
+
+filterspecs are a series of
+  &lt;tag&gt;<span style="color:#f92672">[</span>:priority<span style="color:#f92672">]</span>
+
+where &lt;tag&gt; is a log component tag <span style="color:#f92672">(</span>or * <span style="color:#66d9ef">for</span> all<span style="color:#f92672">)</span> and priority is:
+  V    Verbose <span style="color:#f92672">(</span>default <span style="color:#66d9ef">for</span> &lt;tag&gt;<span style="color:#f92672">)</span>
+  D    Debug <span style="color:#f92672">(</span>default <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">)</span>
+  I    Info
+  W    Warn
+  E    Error
+  F    Fatal
+  S    Silent <span style="color:#f92672">(</span>suppress all output<span style="color:#f92672">)</span>
+
+<span style="color:#e6db74">&#39;*&#39;</span> by itself means <span style="color:#e6db74">&#39;*:D&#39;</span> and &lt;tag&gt; by itself means &lt;tag&gt;:V.
+If no <span style="color:#e6db74">&#39;*&#39;</span> filterspec or -s on command line, all filter defaults to <span style="color:#e6db74">&#39;*:V&#39;</span>.
+eg: <span style="color:#e6db74">&#39;*:S &lt;tag&gt;&#39;</span> prints only &lt;tag&gt;, <span style="color:#e6db74">&#39;&lt;tag&gt;:S&#39;</span> suppresses all &lt;tag&gt; log messages.
 
 If not specified on the command line, filterspec is set from ANDROID_LOG_TAGS.
 
 If not specified with -v on command line, format is set from ANDROID_PRINTF_LOG
 or defaults to <span style="color:#e6db74">&#34;threadtime&#34;</span>
-</code></pre></div></article>
+</code></pre></div><p>+++</p>
+</article>
  
       
 
@@ -502,9 +532,9 @@ or defaults to <span style="color:#e6db74">&#34;threadtime&#34;</span>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/c989c82555e78199324eadbff9f3bf48492bbad5" title='Last modified by rentianyu | December 22, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/3e11c62b20a8d94ca26392797b656551fa8133d6" title='Last modified by 小贝塔 | March 22, 2022' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 22, 2020</span>
+      <span>March 22, 2022</span>
     </a>
   </div>
 
