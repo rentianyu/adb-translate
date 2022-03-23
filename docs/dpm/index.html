@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.68.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=":/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &lt;USER_ID&gt; | current ] &lt;COMPONENT&gt; usage: dpm set-device-owner [ --user &lt;USER_ID&gt; | current *EXPERIMENTAL* ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; usage: dpm set-profile-owner [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; usage: dpm remove-active-admin [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; dpm set-active-admin: Sets the given component as active admin for an existing user.">
+<meta name="description" content=":/system/bin # dpm 为了帮助开发和测试设备管理应用程序，可以向设备策略管理器dpm发送命令。 dpm = device policy manager usage: dpm [subcommand] [options] 用法：dpm [子命令] [可选操作] usage: dpm set-active-admin [ --user &lt;USER_ID&gt; | current ] &lt;COMPONENT&gt; 用法：dpm 设置活跃管理员 [用户ID | 当前用户] &lt;组件&gt; usage: dpm set-device-owner [ --user &lt;USER_ID&gt; | current *EXPERIMENTAL* ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 设置设备所有者 [用户ID | 当前用户-&#39;实验性&#39;] [名字] &lt;组件&gt; usage: dpm set-profile-owner [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 设置概述所有者 [用户ID | 当前用户] [名字] &lt;组件&gt; usage: dpm remove-active-admin [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 移除活跃管理员 [用户ID | 当前用户] [名字] &lt;组件&gt; dpm set-active-admin: Sets the given component as active admin for an existing user.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content=":/system/bin # dpm usage: dpm [subcommand] [options] usage: dpm set-active-admin [ --user &lt;USER_ID&gt; | current ] &lt;COMPONENT&gt; usage: dpm set-device-owner [ --user &lt;USER_ID&gt; | current *EXPERIMENTAL* ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; usage: dpm set-profile-owner [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; usage: dpm remove-active-admin [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; dpm set-active-admin: Sets the given component as active admin for an existing user." />
+<meta property="og:description" content=":/system/bin # dpm 为了帮助开发和测试设备管理应用程序，可以向设备策略管理器dpm发送命令。 dpm = device policy manager usage: dpm [subcommand] [options] 用法：dpm [子命令] [可选操作] usage: dpm set-active-admin [ --user &lt;USER_ID&gt; | current ] &lt;COMPONENT&gt; 用法：dpm 设置活跃管理员 [用户ID | 当前用户] &lt;组件&gt; usage: dpm set-device-owner [ --user &lt;USER_ID&gt; | current *EXPERIMENTAL* ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 设置设备所有者 [用户ID | 当前用户-&#39;实验性&#39;] [名字] &lt;组件&gt; usage: dpm set-profile-owner [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 设置概述所有者 [用户ID | 当前用户] [名字] &lt;组件&gt; usage: dpm remove-active-admin [ --user &lt;USER_ID&gt; | current ] [ --name &lt;NAME&gt; ] &lt;COMPONENT&gt; 用法：dpm 移除活跃管理员 [用户ID | 当前用户] [名字] &lt;组件&gt; dpm set-active-admin: Sets the given component as active admin for an existing user." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/dpm/" />
-<meta property="article:modified_time" content="2022-03-23T00:28:48+08:00" />
+<meta property="article:modified_time" content="2022-03-23T23:15:43+08:00" />
 <title>Dpm | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/adb-translate/book.min.09a284f5a03730d86dde350d2c062b1514e48fdfebba7763941c0674ef65748f.css" integrity="sha256-CaKE9aA3MNht3jUNLAYrFRTkj9/rundjlBwGdO9ldI8=">
-<script defer src="/adb-translate/en.search.min.d01c051b2f83a6547b9df51f0311cdfdfb99012a7f2ef4ce3dc49894d5b4645b.js" integrity="sha256-0BwFGy&#43;DplR7nfUfAxHN/fuZASp/LvTOPcSYlNW0ZFs="></script>
+<script defer src="/adb-translate/en.search.min.3035c3a5f831bb72c0002d80a44d859e826f52a60adc2dfe0f0a5476c5017f3c.js" integrity="sha256-MDXDpfgxu3LAAC2ApE2FnoJvUqYK3C3&#43;DwpUdsUBfzw="></script>
 
 <script defer src="/adb-translate/sw.min.c847bdf3c14d054e3f4cead28bd290c6d0d87470062dce10e0f607681f67b1cd.js" integrity="sha256-yEe988FNBU4/TOrSi9KQxtDYdHAGLc4Q4PYHaB9nsc0="></script>
 <!--
@@ -412,23 +412,37 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:/system/bin <span style="color:#75715e"># dpm</span>
+为了帮助开发和测试设备管理应用程序，可以向设备策略管理器dpm发送命令。
+dpm <span style="color:#f92672">=</span> device policy manager
 usage: dpm <span style="color:#f92672">[</span>subcommand<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span>
+用法：dpm <span style="color:#f92672">[</span>子命令<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>可选操作<span style="color:#f92672">]</span>
+
 usage: dpm set-active-admin <span style="color:#f92672">[</span> --user &lt;USER_ID&gt; | current <span style="color:#f92672">]</span> &lt;COMPONENT&gt;
+用法：dpm 设置活跃管理员 <span style="color:#f92672">[</span>用户ID | 当前用户<span style="color:#f92672">]</span> &lt;组件&gt;
+
 usage: dpm set-device-owner <span style="color:#f92672">[</span> --user &lt;USER_ID&gt; | current *EXPERIMENTAL* <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> --name &lt;NAME&gt; <span style="color:#f92672">]</span> &lt;COMPONENT&gt;
+用法：dpm 设置设备所有者 <span style="color:#f92672">[</span>用户ID | 当前用户-<span style="color:#e6db74">&#39;实验性&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">[</span>名字<span style="color:#f92672">]</span> &lt;组件&gt; 
+
 usage: dpm set-profile-owner <span style="color:#f92672">[</span> --user &lt;USER_ID&gt; | current <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> --name &lt;NAME&gt; <span style="color:#f92672">]</span> &lt;COMPONENT&gt;
+用法：dpm 设置概述所有者 <span style="color:#f92672">[</span>用户ID | 当前用户<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>名字<span style="color:#f92672">]</span> &lt;组件&gt;
+
 usage: dpm remove-active-admin <span style="color:#f92672">[</span> --user &lt;USER_ID&gt; | current <span style="color:#f92672">]</span> <span style="color:#f92672">[</span> --name &lt;NAME&gt; <span style="color:#f92672">]</span> &lt;COMPONENT&gt;
+用法：dpm 移除活跃管理员 <span style="color:#f92672">[</span>用户ID | 当前用户<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>名字<span style="color:#f92672">]</span> &lt;组件&gt;
 
 dpm set-active-admin: Sets the given component as active admin <span style="color:#66d9ef">for</span> an existing user.
-
+                      作为活动管理员为已经存在的用户设置给定的组件???
 dpm set-device-owner: Sets the given component as active admin, and its package as device owner.
-
-dpm set-profile-owner: Sets the given component as active admin and profile owner <span style="color:#66d9ef">for</span> an existing user.
+		      作为活跃管理员设置给定的组件以及其作为设备拥有者设置其包???
+dpm set-profile-owner: Sets the given component as active admin and profile owner <span style="color:#66d9ef">for</span> an existing user.                     作为活跃管理员和概述所有者为已经存在的用户设置给定的组件???
 
 dpm remove-active-admin: Disables an active admin, the admin must have declared android:testOnly in the application in its manifest. This will also remove device and profile owners.
+	关闭一个活跃管理员，该管理员需在其应用清单中申明安卓：testOnly.这同样会移除设备和概述拥有者。
 
 dpm clear-freeze-period-record: clears framework-maintained record of past freeze periods that the device went through. For use during feature development to prevent triggering restriction on setting freeze periods.
+	清理掉设备先前冻结周期的框架记录.在之后的开发期，防止在设置冻结时间上触发限制。???
 
 dpm force-security-logs: makes all security logs available to the DPC and triggers DeviceAdminReceiver.onSecurityLogsAvailable<span style="color:#f92672">()</span> <span style="color:#66d9ef">if</span> needed.
+使得所有的安全日志能够到达数据处理中心，并且如果需要可触发DeviceAdminReceiver.onSecurityLogsAvailable<span style="color:#f92672">()</span>函数。
 </code></pre></div></article>
  
       
@@ -439,9 +453,9 @@ dpm force-security-logs: makes all security logs available to the DPC and trigge
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/3e11c62b20a8d94ca26392797b656551fa8133d6" title='Last modified by 小贝塔 | March 22, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/e46ac66c5714d502d4b65c7ad9749a4e0c9e735b" title='Last modified by 小贝塔 | March 23, 2022' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 22, 2022</span>
+      <span>March 23, 2022</span>
     </a>
   </div>
 
