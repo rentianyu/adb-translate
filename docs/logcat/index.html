@@ -10,7 +10,7 @@
 <meta property="og:description" content=":/system/bin # logcat --help Usage: logcat [options] [filterspecs] 查看系统日志 options include: -s Set default filter to silent. Equivalent to filterspec &#39;*:S&#39; 默认日志输出无筛选,相当于筛选说明&#39;*:S&#39;	-f &lt;file&gt;, --file=&lt;file&gt; Log to file. Default is stdout 将日志写入文件，默认为标准命令行输出 -r &lt;kbytes&gt;, --rotate-kbytes=&lt;kbytes&gt; Rotate log every kbytes. Requires -f option 每xKB循环一次日志，需要配合-f操作 -n &lt;count&gt;, --rotate-count=&lt;count&gt; Sets max number of rotated logs to &lt;count&gt;, default 4 设置循环日志的最大次数，默认为4 --id=&lt;id&gt; If the signature id for logging to file changes, then clear the fileset and continue 如果记录到文件的日志标识id改变，就会清除文件集然后继续 -v &lt;format&gt;, --format=&lt;format&gt; Sets log print format verb and adverbs, where &lt;format&gt; is: brief help long process raw tag thread threadtime time and individually flagged modifying adverbs can be added: color descriptive epoch monotonic printable uid usec UTC year zone Multiple -v parameters or comma separated list of format and format modifiers are allowed." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rentianyu.github.io/adb-translate/docs/logcat/" />
-<meta property="article:modified_time" content="2022-03-23T23:23:05+08:00" />
+<meta property="article:modified_time" content="2022-03-23T23:40:37+08:00" />
 <title>Logcat | ADB 翻译文档</title>
 <link rel="manifest" href="/adb-translate/manifest.json">
 <link rel="icon" href="/adb-translate/favicon.png" type="image/x-icon">
@@ -532,7 +532,7 @@ or defaults to <span style="color:#e6db74">&#34;threadtime&#34;</span>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/8871be6120533ef5b439d0d377f1ea8f1dd9497f" title='Last modified by 小贝塔 | March 23, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/rentianyu/adb-translate/commit/b49cfcf8a3524e9f9b39d04f3d58e1795e5e87be" title='Last modified by 小贝塔 | March 23, 2022' target="_blank" rel="noopener">
       <img src="/adb-translate/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>March 23, 2022</span>
     </a>
