@@ -1,8 +1,10 @@
 ```bash
 :/system/bin # cmd
 cmd: No service specified; use -l to list all services
+不是特别的服务，使用-l来列出所有服务。
 20|:/system/bin # cmd -l
 Currently running services:
+当前正在运行的服务
   DockObserver
   MiuiBackup
   MiuiInit

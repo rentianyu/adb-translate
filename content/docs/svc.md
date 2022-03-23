@@ -8,5 +8,7 @@ Available commands:
     usb          Control Usb state
     nfc          Control NFC functions
     bluetooth    Control Bluetooth service
+
+svc 内容不完整等待添加
 ```
 
