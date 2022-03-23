@@ -91,7 +91,7 @@ app installation (see also `adb shell cmd package help`):
      -d: allow version code downgrade (debuggable packages only)
      -p: partial application install (install-multiple only)
      -g: grant all runtime permissions
-     --abi ABI: override platform's default ABI
+     --abi ABI: override platform\'s default ABI
      --instant: cause the app to be installed as an ephemeral install app
      --no-streaming: always push APK to device and invoke Package Manager as separate steps
      --streaming: force streaming APK directly into Package Manager
