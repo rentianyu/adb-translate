@@ -17,5 +17,6 @@ swapoff swapon sync sysctl tac tail tar taskset tee time timeout top
 touch tr traceroute traceroute6 true truncate tty tunctl ulimit umount
 uname uniq unix2dos uptime usleep uudecode uuencode vconfig vmstat
 wc which whoami xargs xxd yes zcat
+类似busybox
 ```
 

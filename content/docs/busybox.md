@@ -4,19 +4,22 @@ BusyBox v1.31.1-osm0sis (2020-05-06 20:45:25 ADT) multi-call binary.
 BusyBox is copyrighted by many authors between 1998-2015.
 Licensed under GPLv2. See source distribution for detailed
 copyright notices.
+Busybox版权归在1998-2015年的所有作者，GPLv2证书。看源代码获得更多细节
 
 Usage: busybox [function [arguments]...]
    or: busybox --list[-full]
    or: busybox --show SCRIPT
    or: busybox --install [-s] [DIR]
    or: function [arguments]...
+用法：busybox [功能 [参数]...]
 
         BusyBox is a multi-call binary that combines many common Unix
         utilities into a single executable.  Most people will create a
         link to busybox for each function they wish to use and BusyBox
         will act like whatever it was invoked as.
-
+	busybox 是一个multi-call二进制，它集成了很多实用的Unix命令成为一个可单独运行的工具.很多人会创建一个链接到busybox为使用他们所期望的功能。busybox也名副其实。
 Currently defined functions:
+目前所具有的功能(就步一一翻译了）
         [, [[, acpid, adjtimex, ar, arch, arp, arping,
         ash, awk, base64, basename, bbconfig, beep,
         blkdiscard, blkid, blockdev, brctl, bunzip2,
